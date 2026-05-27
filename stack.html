@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Core Stack — Ritika Hasani</title>
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <!-- ═══════ NAV ═══════ -->
+    <nav id="nav">
+      <a href="index.html" class="nav-logo">Ritika <span>Hasani</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="craft.html">Craft</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="stack.html">Stack</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="connect.html">Connect</a></li>
+      </ul>
+      <a href="mailto:ritika.hasani.0306@gmail.com" class="nav-cta">Email</a>
+    </nav>
+
+    <!-- ═══════ TOOLS ═══════ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">Core Stack</div>
+          <h2 class="section-title">
+            Tools I use to <em>design</em><br />and build products.
+          </h2>
+        </div>
+        <div class="stack-tabs reveal">
+          <article class="stack-tab">
+            <div class="stack-tab-head">
+              <h3>Design & Creativity</h3>
+              <p>Visual craft and user experience workflow</p>
+            </div>
+            <div class="stack-chip-grid">
+              <div class="stack-chip">
+                <span class="stack-chip-label">Tools</span>
+                <span class="stack-chip-copy"
+                  >Figma (Advanced), Canva, Adobe XD, VN</span
+                >
+              </div>
+              <div class="stack-chip">
+                <span class="stack-chip-label">Skills</span>
+                <span class="stack-chip-copy"
+                  >UI Design, UX Case Study, Prototyping, Wireframing, Responsive Web Design, Design Systems, Prompt Engineering, Gen AI</span
+                >
+              </div>
+              <div class="stack-chip">
+                <span class="stack-chip-label">Visual Theory</span>
+                <span class="stack-chip-copy"
+                  >Color Theory, Layout Grids, Information Architecture</span
+                >
+              </div>
+            </div>
+          </article>
+          <article class="stack-tab">
+            <div class="stack-tab-head">
+              <h3>Engineering & Development</h3>
+              <p>Execution, collaboration, and delivery foundations</p>
+            </div>
+            <div class="stack-chip-grid">
+              <div class="stack-chip">
+                <span class="stack-chip-label">Tools</span>
+                <span class="stack-chip-copy"
+                  >Confluence, Jira, Xcode, Android Studio, VS Code, Eclipse, NetBeans, Google Workspace, MS Office</span
+                >
+              </div>
+              <div class="stack-chip">
+                <span class="stack-chip-label">Languages</span>
+                <span class="stack-chip-copy"
+                  >React Native, TypeScript, Java, HTML5, CSS, C, C++, DSA</span
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer>
+      <div class="footer-brand">
+        Ritika <span>Hasani</span> · UI/UX Designer
+      </div>
+      <div class="footer-copy">© 2026 · Designed with intention</div>
+      <div class="footer-links">
+        <a href="mailto:ritika.hasani.0306@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/ritika-hasani-b477501a9" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://drive.google.com/file/d/1xRbjM-YlccKc3PoMZjt7O5ifokO0vY9r/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
+    </footer>
+
+    <script>
+      const nav = document.getElementById("nav");
+      const navLogo = document.querySelector(".nav-logo");
+
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 60);
+        navLogo.style.opacity = "1";
+        navLogo.style.pointerEvents = "auto";
+      });
+
+      const revealEls = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      revealEls.forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>
