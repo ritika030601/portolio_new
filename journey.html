@@ -207,6 +207,19 @@
         { threshold: 0.12 },
       );
       revealEls.forEach((el) => io.observe(el));
+
+      // Set active nav link
+      const setActiveNav = () => {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      };
+      setActiveNav();
     </script>
   </body>
 </html>

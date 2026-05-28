@@ -233,9 +233,9 @@
     <!-- Design Vision Quote -->
     <section class="quote-section">
       <div class="container">
-        <div class="quote-source">As said by a thoughtful designer</div>
-        <div class="quote-text">"Design isn't just what a product looks like - it's how it feels, how it guides people, and how it makes them confident to move forward."</div>
-        <div class="quote-attr">- MY DESIGN VISION</div>
+        <div class="quote-source">As said by Steve Jobs</div>
+        <div class="quote-text">"The best products don't just solve problems — they <em>anticipate human emotions</em> and empower human potential."</div>
+        <div class="quote-attr">- DESIGN PHILOSOPHY</div>
       </div>
     </section>
 
@@ -279,8 +279,21 @@
         navLogo.style.pointerEvents = hideLogo ? "none" : "auto";
       };
 
+      // Set active nav link
+      const setActiveNav = () => {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      };
+
       window.addEventListener("scroll", updateLogoVisibility);
       updateLogoVisibility();
+      setActiveNav();
 
       const revealEls = document.querySelectorAll(".reveal");
       const io = new IntersectionObserver(

@@ -62,21 +62,6 @@
               Today, I look at design a little differently. Because of my engineering background, I don’t just design pretty screens—I design with a deep understanding of how data flows and how components scale. I know exactly what’s happening under the hood, which makes it easy for me to collaborate smoothly with development teams and build user-friendly experiences that actually solve real-world problems.
             </p>
           </div>
-
-          <div class="skills-grid reveal reveal-delay-4">
-            <div class="skill-chip">
-              <span class="skill-chip-dot"></span>Figma
-            </div>
-            <div class="skill-chip">
-              <span class="skill-chip-dot"></span>Adobe (Basic)
-            </div>
-            <div class="skill-chip">
-              <span class="skill-chip-dot"></span>Prompt Engineering
-            </div>
-            <div class="skill-chip">
-              <span class="skill-chip-dot"></span>VS Code
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -117,6 +102,19 @@
         { threshold: 0.12 },
       );
       revealEls.forEach((el) => io.observe(el));
+
+      // Set active nav link
+      const setActiveNav = () => {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+          }
+        });
+      };
+      setActiveNav();
     </script>
   </body>
 </html>
