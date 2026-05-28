@@ -412,27 +412,15 @@ section {
   background: var(--bg);
 }
 .about-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(360px, 1fr);
+  gap: 40px;
   align-items: center;
   justify-content: center;
-}
-.about-top-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .about-image-area {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 12px;
@@ -448,18 +436,13 @@ section {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  /* increased size per request: 40% more than previous 48% -> ~67% */
-  width: 67%;
-  max-width: 360px;
+  width: 74%;
+  max-width: 396px;
   transition: transform 220ms var(--ease);
   transform-origin: center;
 }
 .about-image-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* reduced white overlay: extend transparent area so bottom whiteness is lighter */
-  background: linear-gradient(to bottom, transparent 70%, var(--bg) 100%);
+  display: none;
 }
 .about-image-inner {
   width: 100%;
