@@ -340,6 +340,10 @@ section {
   padding: 80px 0;
 }
 
+.section-pad:has(.education-timeline) + .section-pad {
+  padding-top: 40px;
+}
+
 .section-header {
   margin-bottom: 80px;
 }
@@ -422,7 +426,7 @@ section {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 9px;
+  gap: 8px;
   align-items: center;
   justify-content: center;
   max-width: 1000px;
@@ -528,7 +532,7 @@ section {
   text-align: left;
 }
 .about-copy {
-  margin-top: 48px;
+  margin-top: 24px;
   max-width: none;
   width: 100%;
   margin-left: 0;
@@ -542,7 +546,7 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 24px 0 12px;
+  margin: 16px 0 12px;
   color: var(--text);
 }
 .about-body strong {
@@ -1065,6 +1069,7 @@ section {
 #experience {
   background: var(--bg2);
   border-top: 1px solid var(--border);
+  padding: 60px 0;
 }
 .exp-layout {
   display: grid;
@@ -1112,7 +1117,7 @@ section {
   padding: 34px 36px;
   border: 1px solid var(--border);
   border-radius: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   position: relative;
   background: var(--surface);
   transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s,
@@ -1494,7 +1499,7 @@ section {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #10b981;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   padding: 0;
 }
 .status-dot {
@@ -1526,6 +1531,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 40px;
 }
 .contact-link {
   display: flex;
@@ -1573,7 +1579,7 @@ section {
 .contact-right {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
 }
 .contact-offer {
   padding: 32px;
@@ -1617,7 +1623,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin-top: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 .recognition-item {
   padding: 24px;
@@ -1660,8 +1666,9 @@ section {
 .education-timeline {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 40px;
+  gap: 50px;
+  margin-top: 60px;
+  margin-bottom: 48px;
   align-items: center;
   justify-content: center;
 }
@@ -1689,13 +1696,13 @@ section {
 .timeline-block::after {
   content: '→';
   position: absolute;
-  right: -42px;
+  right: -55px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 24px;
   color: var(--gold);
   font-weight: bold;
-  width: 30px;
+  width: 50px;
   text-align: center;
 }
 .timeline-block:last-child::after {
@@ -1764,13 +1771,13 @@ section {
 footer {
   background: var(--bg);
   border-top: 1px solid var(--border);
-  padding: 24px 48px;
+  padding: 24px 48px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .footer-brand {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
