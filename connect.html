@@ -30,25 +30,16 @@
 Let's build something<br /><em>that matters.</em>
 </h2>
 <p class="contact-body">
-I'm currently looking for full-time UI/UX roles at companies where design and engineering work closely together. If you're building something complex that needs to feel simple, I'd love to talk.
+I'm currently looking for full-time UI/UX roles at product companies where design and engineering work closely together. If you're building something complex that needs to feel simple, I'd love to talk.
 </p>
 <div class="contact-links">
 <a href="mailto:ritika.hasani.0306@gmail.com" class="contact-link">
 <div class="contact-link-icon">✉</div>
 <div class="contact-link-text">
 <div class="contact-link-label">Email</div>
-<div class="contact-link-value">
-ritika.hasani.0306@gmail.com
+<div class="contact-link-value">ritika.hasani.0306@gmail.com</div>
 </div>
-</div>
-<svg
-width="16"
-height="16"
-fill="none"
-stroke="currentColor"
-stroke-width="2"
-viewBox="0 0 24 24"
->
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 <path d="M5 12h14M12 5l7 7-7 7" />
 </svg>
 </a>
@@ -58,38 +49,17 @@ viewBox="0 0 24 24"
 <div class="contact-link-label">Phone</div>
 <div class="contact-link-value">+91 · 8999 627 602</div>
 </div>
-<svg
-width="16"
-height="16"
-fill="none"
-stroke="currentColor"
-stroke-width="2"
-viewBox="0 0 24 24"
->
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 <path d="M5 12h14M12 5l7 7-7 7" />
 </svg>
 </a>
-
-href="https://www.linkedin.com/in/ritika-hasani-b477501a9"
-class="contact-link"
-target="_blank"
-rel="noopener noreferrer"
->
+<a href="https://www.linkedin.com/in/ritika-hasani-b477501a9" class="contact-link" target="_blank" rel="noopener noreferrer">
 <div class="contact-link-icon">in</div>
 <div class="contact-link-text">
 <div class="contact-link-label">LinkedIn</div>
-<div class="contact-link-value">
-linkedin.com/in/ritikahasani
+<div class="contact-link-value">linkedin.com/in/ritikahasani</div>
 </div>
-</div>
-<svg
-width="16"
-height="16"
-fill="none"
-stroke="currentColor"
-stroke-width="2"
-viewBox="0 0 24 24"
->
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 <path d="M5 12h14M12 5l7 7-7 7" />
 </svg>
 </a>
@@ -108,10 +78,10 @@ I understand both the design side and what it takes to build it. I think about F
 <div class="contact-offer">
 <div class="contact-offer-label">My ideal team</div>
 <div class="contact-offer-title">
-Teams where design drives product outcomes
+Product teams where design drives product outcomes
 </div>
 <div class="contact-offer-body">
-I'm looking for UI/UX roles on teams - where clear, trustworthy, and accessible design genuinely shapes how people use the product.
+I'm looking for UI/UX roles on teams where clear, trustworthy, and accessible design genuinely shapes how people use the product.
 </div>
 </div>
 <div class="contact-offer">
@@ -135,9 +105,9 @@ Ritika <span>Hasani</span> · UI/UX Designer
 </div>
 <div class="footer-copy">© 2026 · Designed with intention</div>
 <div class="footer-links">
-<span class="footer-text">EMAIL</span>
+<a href="mailto:ritika.hasani.0306@gmail.com" class="footer-link">EMAIL</a>
 <a href="https://www.linkedin.com/in/ritika-hasani-b477501a9" target="_blank" rel="noopener noreferrer" class="footer-link">LINKEDIN</a>
-<a href="https://drive.google.com/file/d/1xRbjM-YlccKc3PoMZjt7O5ifokO0vY9r/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-text-link">RESUME</a>
+<a href="https://drive.google.com/file/d/1jQTm82M6nO2d1zzShyqM012E-N16LjZa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-text-link">RESUME</a>
 </div>
 </footer>
 
@@ -149,16 +119,12 @@ const footer = document.querySelector("footer");
 const updateLogoVisibility = () => {
   const scrollY = window.scrollY;
   nav.classList.toggle("scrolled", scrollY > 60);
-
   let hideLogo = false;
-
-  // Hide when footer is visible
   if (footer) {
     const footerTop = footer.offsetTop;
     const viewportBottom = scrollY + window.innerHeight;
     hideLogo = viewportBottom > footerTop;
   }
-
   navLogo.classList.toggle("hidden", hideLogo);
 };
 
@@ -179,7 +145,6 @@ const io = new IntersectionObserver(
 );
 revealEls.forEach((el) => io.observe(el));
 
-// Set active nav link
 const setActiveNav = () => {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav-links a');

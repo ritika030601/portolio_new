@@ -340,22 +340,20 @@ section {
   padding: 80px 0;
 }
 
-/* Journey page: tighten the gap between the education timeline
-   and the "Professional Journey" section below it (halved) */
+/* Journey page: tighten the gap between education timeline
+   and Professional Journey below it */
 .section-pad:has(.education-timeline) {
   padding-bottom: 40px;
 }
-
 .section-pad:has(.education-timeline) + .section-pad {
   padding-top: 20px;
   padding-bottom: 40px;
 }
 
-/* Connect page: more breathing room below the nav, and a tighter
-   gap above the footer (halved) */
+/* Connect page: more breathing room below nav, tighter above footer */
 .section-pad:has(.contact-grid) {
   padding-top: 140px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .section-header {
@@ -452,7 +450,8 @@ section {
   align-items: center;
   justify-content: flex-end;
   gap: 12px;
-  margin: 0 auto;
+  margin: 0;
+  padding-right: 16px;
 }
 .about-content {
   width: 100%;
@@ -465,8 +464,8 @@ section {
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  width: 66.6%;
-  max-width: 280px;
+  width: 60%;
+  max-width: 250px;
   transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
   transform-origin: center;
   box-shadow: 0 8px 24px rgba(98, 76, 52, 0.08);
@@ -489,11 +488,10 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
   display: block;
   border-radius: 12px;
 }
-
 .about-image-frame:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(98, 76, 52, 0.12);
@@ -501,7 +499,7 @@ section {
 .about-deco-box {
   position: absolute;
   bottom: -24px;
-  right: -24px;
+  right: -8px;
   width: 120px;
   height: 120px;
   border: 1px solid var(--gold);
@@ -524,7 +522,6 @@ section {
   font-weight: 400;
   line-height: 1.4;
   color: var(--text);
-  margin-bottom: 16px;
   max-width: 540px;
   margin: 0;
   text-align: left;
@@ -553,7 +550,6 @@ section {
   margin-right: 0;
   text-align: left;
 }
-
 .about-heading {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
@@ -573,7 +569,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   margin-top: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .stack-item {
@@ -584,14 +580,12 @@ section {
   transition: all 0.3s var(--ease);
   cursor: pointer;
 }
-
 .stack-item:hover {
   border-color: var(--gold-light);
   background: linear-gradient(135deg, var(--surface) 0%, rgba(200, 149, 67, 0.04) 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(175, 127, 52, 0.08);
 }
-
 .stack-item-title {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
@@ -601,21 +595,18 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-
 .stack-item-subtitle {
   font-size: 11px;
   color: var(--text-muted);
   margin-bottom: 14px;
   font-style: italic;
 }
-
 .stack-item-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 .stack-item-list li {
   font-size: 12px;
   line-height: 1.6;
@@ -660,7 +651,8 @@ section {
    WORK / PROJECTS
 ═══════════════════════════════════════════ */
 #work {
-  background: #faf3e7;
+  /* One shade darker than --bg (#f7f1e7) to separate from rest */
+  background: #ede5d5;
   border-top: 1px solid var(--border);
 }
 .projects-list {
@@ -706,7 +698,6 @@ section {
   position: relative;
   z-index: 1;
 }
-
 .project-num {
   font-family: 'Monaco', 'Courier New', monospace;
   font-size: 12px;
@@ -841,10 +832,6 @@ section {
 .project-gallery-minglemeal {
   flex-wrap: nowrap;
 }
-
-.project-gallery-minglemeal {
-  flex-wrap: nowrap;
-}
 .project-shot {
   border: 0;
   border-radius: 0;
@@ -868,7 +855,6 @@ section {
 .featured-project:hover .project-shot {
   transform: translateY(-2px);
 }
-
 .featured-project-body {
   padding: 40px;
   display: flex;
@@ -1129,8 +1115,7 @@ section {
   margin-bottom: 10px;
   position: relative;
   background: var(--surface);
-  transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s,
-    background 0.22s;
+  transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s, background 0.22s;
 }
 .exp-entry:hover {
   border-color: var(--border-bright);
@@ -1385,29 +1370,9 @@ section {
   overflow: hidden;
 }
 .quote-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  background: transparent;
-  pointer-events: none;
-  z-index: 1;
   display: none !important;
 }
 .quote-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  background: transparent;
-  pointer-events: none;
-  z-index: 1;
   display: none;
 }
 .quote-source {
@@ -1445,7 +1410,6 @@ section {
   z-index: 2;
 }
 
-
 /* ═══════════════════════════════════════════
    CONTACT
 ═══════════════════════════════════════════ */
@@ -1457,7 +1421,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: start;
 }
 .contact-heading {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -1493,8 +1457,7 @@ section {
   flex-shrink: 0;
 }
 @keyframes statusPulse {
-  0%,
-  100% {
+  0%, 100% {
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
   }
   50% {
@@ -1512,7 +1475,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 .contact-link {
   display: flex;
@@ -1567,8 +1530,7 @@ section {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: rgba(255, 251, 245, 0.9);
-  transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s,
-    background 0.22s;
+  transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s, background 0.22s;
 }
 .contact-offer:hover {
   border-color: rgba(175, 127, 52, 0.45);
@@ -1604,7 +1566,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .recognition-item {
   padding: 24px;
@@ -1758,7 +1720,7 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .footer-brand {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -1836,6 +1798,10 @@ footer {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .about-image-area {
+    justify-content: center;
+    padding-right: 0;
   }
   .exp-layout {
     grid-template-columns: 1fr;

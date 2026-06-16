@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ritika Hasani - UI/UX Designer</title>
-<!-- Fonts are now system fonts -->
 <link rel="stylesheet" href="portfolio.css" />
 </head>
 <body>
@@ -26,7 +25,7 @@
 <h1 class="hero-name">Ritika <em>Hasani</em></h1>
 <p class="hero-role">UI/UX Designer</p>
 <p class="hero-statement">
-I worked as a Software Engineer for 3+ years building production apps. Over the last 1-1.5 years, I discovered my passion for design and now apply my engineering mindset to create intuitive, user-centered interfaces.
+I spent 3+ years as a software engineer building mobile apps - adding new features, keeping things production-ready, and working alongside the web side of the same product. That's where my love for design started.
 </p>
 <div class="hero-actions">
 <a href="#work" class="btn-primary">
@@ -54,7 +53,7 @@ Get in touch
 Projects where I used <em>design</em><br />to solve real problems.
 </h2>
 <p class="section-subtitle">
-A look at the research, decisions, and execution behind each project - from the first problem to what shipped.
+I'm actively working towards a career in UI/UX - these projects are where I applied my skills and thinking to the kind of work I want to do.
 </p>
 </div>
 
@@ -240,7 +239,7 @@ The Hybrid <em>Edge</em>
 Design that speaks developer, code that respects design.
 </p>
 <p class="process-description">
-I don't just hand off static mockups. I design with an engineer's understanding of how things actually get built, so what feels intuitive on screen also works once it's live. That's how good design and clean, maintainable code end up working together.
+Having worked as an engineer, I know what it actually takes to build something. That means I design with the real constraints in mind - so what looks good on screen also holds up once it's in production.
 </p>
 </div>
 </div>
@@ -289,9 +288,9 @@ Ritika <span>Hasani</span> · UI/UX Designer
 </div>
 <div class="footer-copy">© 2026 · Designed with intention</div>
 <div class="footer-links">
-<span class="footer-text">EMAIL</span>
+<a href="mailto:ritika.hasani.0306@gmail.com" class="footer-link">EMAIL</a>
 <a href="https://www.linkedin.com/in/ritika-hasani-b477501a9" target="_blank" rel="noopener noreferrer" class="footer-link">LINKEDIN</a>
-<a href="https://drive.google.com/file/d/1xRbjM-YlccKc3PoMZjt7O5ifokO0vY9r/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-text-link">RESUME</a>
+<a href="https://drive.google.com/file/d/1jQTm82M6nO2d1zzShyqM012E-N16LjZa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="footer-text-link">RESUME</a>
 </div>
 </footer>
 
@@ -305,16 +304,11 @@ const footer = document.querySelector("footer");
 const updateLogoVisibility = () => {
   const scrollY = window.scrollY;
   nav.classList.toggle("scrolled", scrollY > 60);
-
   let hideLogo = false;
-
-  // Hide when hero is visible
   if (heroSection) {
     const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
     hideLogo = scrollY < heroBottom - 100;
   }
-
-  // Hide when quote section is visible
   if (quoteSection) {
     const quoteTop = quoteSection.offsetTop;
     const quoteBottom = quoteTop + quoteSection.offsetHeight;
@@ -322,18 +316,14 @@ const updateLogoVisibility = () => {
     const quoteVisible = viewportBottom > quoteTop + 80 && scrollY < quoteBottom - 80;
     hideLogo = hideLogo || quoteVisible;
   }
-
-  // Hide when footer is visible
   if (footer) {
     const footerTop = footer.offsetTop;
     const viewportBottom = scrollY + window.innerHeight;
     hideLogo = hideLogo || (viewportBottom > footerTop);
   }
-
   navLogo.classList.toggle("hidden", hideLogo);
 };
 
-// Set active nav link
 const setActiveNav = () => {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav-links a');
