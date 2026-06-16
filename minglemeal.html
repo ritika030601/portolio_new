@@ -1,104 +1,75 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MingleMeal Case Study - Ritika Hasani</title>
-    <!-- Fonts are now system fonts -->
-    <link rel="stylesheet" href="case-study.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="container topbar-inner">
-        <a class="brand" href="index.html">Ritika <span>Hasani</span></a>
-        <a class="back-link" href="index.html#work">Back to Work</a>
-      </div>
-    </header>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MingleMeal Case Study - Ritika Hasani</title>
+<link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+<header class="topbar">
+<div class="container topbar-inner">
+<a class="brand" href="index.html">Ritika <span>Hasani</span></a>
+<a class="back-link" href="index.html#work">Back to Work</a>
+</div>
+</header>
+<main class="container">
+<section class="hero reveal">
+<p class="kicker">Case Study - Food Rescue Network</p>
+<h1><span class="case-study-number">03.</span> MingleMeal</h1>
+<p>MingleMeal connects restaurants, volunteers, and NGOs to simplify food rescue logistics and reduce waste through a role-based product flow.</p>
+<a class="btn-primary" href="https://www.behance.net/gallery/241672603/MingleMeal" target="_blank" rel="noopener noreferrer">
+View full case study on Behance
+</a>
+</section>
 
-    <main class="container">
-      <section class="hero reveal">
-        <p class="kicker">Case Study - Food Rescue Network</p>
-        <h1><span class="case-study-number">03.</span> MingleMeal</h1>
-        <p>MingleMeal connects restaurants, volunteers, and NGOs to simplify food rescue logistics and reduce waste through a role-based product flow.</p>
-        <a class="btn-primary" href="https://www.behance.net/gallery/241672603/MingleMeal" target="_blank" rel="noopener noreferrer">
-          View full case study on Behance
-        </a>
-      </section>
+<section class="section reveal">
+<h2>The Problem</h2>
+<p class="section-intro">Coordination gaps and unclear handoffs between donors, volunteers, and receivers made food rescue slow and unreliable.</p>
+<div class="points">
+<div class="point">Donations stalled without an accountable, end-to-end flow.</div>
+<div class="point">Volunteers lacked clear pickup direction and verification.</div>
+<div class="point">NGOs needed faster visibility into arriving food and status updates.</div>
+</div>
+</section>
 
-      <section class="section reveal">
-        <h2>The Problem</h2>
-        <p class="section-intro">
-          Coordination gaps and unclear handoffs between donors, volunteers, and
-          receivers made food rescue slow and unreliable.
-        </p>
-        <div class="points">
-          <div class="point">Donations stalled without an accountable, end-to-end flow.</div>
-          <div class="point">Volunteers lacked clear pickup direction and verification.</div>
-          <div class="point">NGOs needed faster visibility into arriving food and status updates.</div>
-        </div>
-      </section>
+<section class="section reveal">
+<h2>The Solution</h2>
+<div class="points">
+<div class="point">Design role-specific flows for donors, volunteers, and NGOs.</div>
+<div class="point">Use status updates and QR verification to improve reliability.</div>
+<div class="point">Provide live pickup tracking and simple confirmation for every handoff.</div>
+</div>
+</section>
 
-      <section class="section reveal">
-        <h2>The Solution</h2>
-        <div class="points">
-          <div class="point">Design role-specific flows for donors, volunteers, and NGOs.</div>
-          <div class="point">Use status updates and QR verification to improve reliability.</div>
-          <div class="point">Provide live pickup tracking and simple confirmation for every handoff.</div>
-        </div>
-      </section>
+<section class="section reveal">
+<h2>Research Focus</h2>
+<p class="section-intro">Research focused on end-to-end logistics, trust signals, and the needs of every stakeholder in the rescue chain.</p>
+<div class="points">
+<div class="point">Interviewed donors, drivers, and NGOs to understand friction points.</div>
+<div class="point">Mapped handoff states from donation to pickup to delivery.</div>
+<div class="point">Validated that clear verification builds confidence and reduces errors.</div>
+</div>
+</section>
 
-      <section class="section reveal">
-        <h2>Research Focus</h2>
-        <p class="section-intro">
-          Research focused on end-to-end logistics, trust signals, and the needs
-          of every stakeholder in the rescue chain.
-        </p>
-        <div class="points">
-          <div class="point">Interviewed donors, drivers, and NGOs to understand friction points.</div>
-          <div class="point">Mapped handoff states from donation to pickup to delivery.</div>
-          <div class="point">Validated that clear verification builds confidence and reduces errors.</div>
-        </div>
-      </section>
+<section class="section reveal">
+<h2>Figma Screens</h2>
+<div class="gallery">
+<img src="minglemeal_1.png" alt="MingleMeal screen one" />
+<img src="minglemeal_2.png" alt="MingleMeal screen two" />
+<img src="minglemeal_3.png" alt="MingleMeal screen three" />
+<img src="minglemeal_4.png" alt="MingleMeal screen four" />
+<img src="minglemeal_5.png" alt="MingleMeal screen five" />
+<img src="minglemeal_6.png" alt="MingleMeal screen six" />
+</div>
+</section>
+</main>
 
-      <section class="section reveal">
-        <h2>Figma Screens</h2>
-        <div class="gallery">
-          <img src="minglemeal_1.png" alt="MingleMeal screen one" />
-          <img src="minglemeal_2.png" alt="MingleMeal screen two" />
-          <img src="minglemeal_3.png" alt="MingleMeal screen three" />
-          <img src="minglemeal_4.png" alt="MingleMeal screen four" />
-          <img src="minglemeal_5.png" alt="MingleMeal screen five" />
-          <img src="minglemeal_6.png" alt="MingleMeal screen six" />
-        </div>
-      </section>
-    </main>
-
-    <script>
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-              io.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-
-      // Set active nav link
-      const setActiveNav = () => {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-          }
-        });
-      };
-      setActiveNav();
-    </script>
-  </body>
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
 </html>

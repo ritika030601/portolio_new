@@ -7,6 +7,16 @@
 <link rel="stylesheet" href="portfolio.css" />
 </head>
 <body>
+
+<!-- ═══════ MOBILE MENU DRAWER ═══════ -->
+<div class="nav-drawer" id="navDrawer">
+  <button class="nav-drawer-close" id="drawerClose" aria-label="Close menu">×</button>
+  <a href="index.html">Home</a>
+  <a href="craft.html">About Me</a>
+  <a href="journey.html">Journey</a>
+  <a href="connect.html">Connect</a>
+</div>
+
 <!-- ═══════ NAV ═══════ -->
 <nav id="nav">
 <a href="index.html" class="nav-logo">Ritika <span>Hasani</span></a>
@@ -16,6 +26,9 @@
 <li><a href="journey.html">Journey</a></li>
 <li><a href="connect.html">Connect</a></li>
 </ul>
+<button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+  <span></span><span></span><span></span>
+</button>
 </nav>
 
 <!-- ═══════ HERO ═══════ -->
@@ -226,18 +239,14 @@ View Case Study
 </div>
 </section>
 
-<!-- Design Philosophy - The Hybrid Edge -->
+<!-- Design Philosophy -->
 <section class="section-pad">
 <div class="container">
 <div class="process-header reveal">
 <div class="process-header-left">
 <div class="section-tag">My Process</div>
-<h2 class="process-main-title">
-The Hybrid <em>Edge</em>
-</h2>
-<p class="process-subheadline">
-Design that speaks developer, code that respects design.
-</p>
+<h2 class="process-main-title">The Hybrid <em>Edge</em></h2>
+<p class="process-subheadline">Design that speaks developer, code that respects design.</p>
 <p class="process-description">
 Having worked as an engineer, I know what it actually takes to build something. That means I design with the real constraints in mind - so what looks good on screen also holds up once it's in production.
 </p>
@@ -248,31 +257,25 @@ Having worked as an engineer, I know what it actually takes to build something. 
 <div class="pillar-number">01</div>
 <div class="pillar-badge">Research & Reality</div>
 <h3 class="pillar-title">Rooted in <em>Reality</em></h3>
-<p class="pillar-body">
-I try to understand both what users need and what the system can realistically support, so the solutions aren't designed in isolation. Interviews, data, and behavior patterns help me get to the real reason behind a problem, not just what's visible on the surface.
-</p>
+<p class="pillar-body">I try to understand both what users need and what the system can realistically support, so the solutions aren't designed in isolation. Interviews, data, and behavior patterns help me get to the real reason behind a problem, not just what's visible on the surface.</p>
 </div>
 <div class="process-pillar">
 <div class="pillar-number">02</div>
 <div class="pillar-badge">Strategy & Logic</div>
 <h3 class="pillar-title">Feasible <em>Innovation</em></h3>
-<p class="pillar-body">
-I think about edge cases, data, and layout constraints from the start, because I've worked as an engineer and know what's realistic to build. That means the strategies I hand off are ones a team can actually run with, without redoing the plan halfway through.
-</p>
+<p class="pillar-body">I think about edge cases, data, and layout constraints from the start, because I've worked as an engineer and know what's realistic to build. That means the strategies I hand off are ones a team can actually run with, without redoing the plan halfway through.</p>
 </div>
 <div class="process-pillar">
 <div class="pillar-number">03</div>
 <div class="pillar-badge">Precision & Performance</div>
 <h3 class="pillar-title">Production-Ready <em>Design</em></h3>
-<p class="pillar-body">
-Every prototype is built with design systems and consistent components, so it translates cleanly into code instead of staying a static mockup. It's high-fidelity, testable, and ready to build on - because the work doesn't stop the moment something ships.
-</p>
+<p class="pillar-body">Every prototype is built with design systems and consistent components, so it translates cleanly into code instead of staying a static mockup. It's high-fidelity, testable, and ready to build on - because the work doesn't stop the moment something ships.</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- Design Vision Quote -->
+<!-- Quote -->
 <section class="quote-section">
 <div class="container">
 <div class="quote-source">As said by Steve Jobs</div>
@@ -283,9 +286,7 @@ Every prototype is built with design systems and consistent components, so it tr
 
 <!-- ═══════ FOOTER ═══════ -->
 <footer>
-<div class="footer-brand">
-Ritika <span>Hasani</span> · UI/UX Designer
-</div>
+<div class="footer-brand">Ritika <span>Hasani</span> · UI/UX Designer</div>
 <div class="footer-copy">© 2026 · Designed with intention</div>
 <div class="footer-links">
 <a href="mailto:ritika.hasani.0306@gmail.com" class="footer-link">EMAIL</a>
@@ -295,12 +296,25 @@ Ritika <span>Hasani</span> · UI/UX Designer
 </footer>
 
 <script>
+/* ── Hamburger menu ── */
+const hamburger = document.getElementById('hamburger');
+const drawer    = document.getElementById('navDrawer');
+const drawerClose = document.getElementById('drawerClose');
+const toggleDrawer = (open) => {
+  hamburger.classList.toggle('open', open);
+  drawer.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+};
+hamburger.addEventListener('click', () => toggleDrawer(true));
+drawerClose.addEventListener('click', () => toggleDrawer(false));
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleDrawer(false)));
+
+/* ── Logo hide/show ── */
 const nav = document.getElementById("nav");
 const navLogo = document.querySelector(".nav-logo");
 const heroSection = document.getElementById("hero");
 const quoteSection = document.querySelector(".quote-section");
 const footer = document.querySelector("footer");
-
 const updateLogoVisibility = () => {
   const scrollY = window.scrollY;
   nav.classList.toggle("scrolled", scrollY > 60);
@@ -313,45 +327,27 @@ const updateLogoVisibility = () => {
     const quoteTop = quoteSection.offsetTop;
     const quoteBottom = quoteTop + quoteSection.offsetHeight;
     const viewportBottom = scrollY + window.innerHeight;
-    const quoteVisible = viewportBottom > quoteTop + 80 && scrollY < quoteBottom - 80;
-    hideLogo = hideLogo || quoteVisible;
+    hideLogo = hideLogo || (viewportBottom > quoteTop + 80 && scrollY < quoteBottom - 80);
   }
   if (footer) {
-    const footerTop = footer.offsetTop;
-    const viewportBottom = scrollY + window.innerHeight;
-    hideLogo = hideLogo || (viewportBottom > footerTop);
+    hideLogo = hideLogo || (scrollY + window.innerHeight > footer.offsetTop);
   }
   navLogo.classList.toggle("hidden", hideLogo);
 };
-
-const setActiveNav = () => {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === currentPage) {
-      link.classList.add('active');
-    }
-  });
-};
-
 window.addEventListener("scroll", updateLogoVisibility);
 updateLogoVisibility();
-setActiveNav();
 
-const revealEls = document.querySelectorAll(".reveal");
-const io = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("visible");
-        io.unobserve(e.target);
-      }
-    });
-  },
-  { threshold: 0.12 },
-);
-revealEls.forEach((el) => io.observe(el));
+/* ── Active nav ── */
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a, #navDrawer a').forEach(link => {
+  link.classList.toggle('active', link.getAttribute('href') === currentPage);
+});
+
+/* ── Reveal ── */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 </script>
 </body>
 </html>
