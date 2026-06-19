@@ -29,6 +29,7 @@
 </button>
 </nav>
 
+<!-- Timeline -->
 <section class="section-pad">
 <div class="container">
 <div class="section-header reveal">
@@ -52,12 +53,12 @@
 <div class="timeline-sub">G.H. Raisoni College<br/>of Engineering<br/>Computer Science</div>
 </div>
 <div class="timeline-block">
-<div class="timeline-year">Jan 2023 - June 2024</div>
-<div class="timeline-title">Trainee & Intern</div>
+<div class="timeline-year">Jan 2023 — Jun 2024</div>
+<div class="timeline-title">Trainee &amp; Intern</div>
 <div class="timeline-sub">Principal Global Services<br/>Pune</div>
 </div>
 <div class="timeline-block">
-<div class="timeline-year">June 2024 - Now</div>
+<div class="timeline-year">Jun 2024 — Now</div>
 <div class="timeline-title">Software Engineer</div>
 <div class="timeline-sub">Principal Global Services<br/>Pune</div>
 </div>
@@ -65,6 +66,7 @@
 </div>
 </section>
 
+<!-- Professional Journey -->
 <section class="section-pad">
 <div class="container">
 <div class="section-header reveal">
@@ -73,48 +75,31 @@
 </div>
 <div class="exp-layout">
 <div class="exp-sidebar reveal">
-<p class="exp-sidebar-title">
-"I spent years building products as an engineer, watching designs come to life in code. That's where I fell in love with design - seeing how it shapes the entire experience."
-</p>
+<p class="exp-sidebar-title">"I spent years building products as an engineer, watching designs come to life in code. That's where I fell in love with design - seeing how it shapes the entire experience."</p>
 <div class="exp-quick-stats">
-<div class="exp-stat">
-<div class="exp-stat-num">3+</div>
-<div class="exp-stat-label">Years in Product</div>
-</div>
-<div class="exp-stat">
-<div class="exp-stat-num">WCAG</div>
-<div class="exp-stat-label">Worked with Accessibility</div>
-</div>
-<div class="exp-stat">
-<div class="exp-stat-num">Kanban</div>
-<div class="exp-stat-label">Delivery Workflow</div>
-</div>
+<div class="exp-stat"><div class="exp-stat-num">3+</div><div class="exp-stat-label">Years in Product</div></div>
+<div class="exp-stat"><div class="exp-stat-num">WCAG</div><div class="exp-stat-label">Worked with Accessibility</div></div>
+<div class="exp-stat"><div class="exp-stat-num">Kanban</div><div class="exp-stat-label">Delivery Workflow</div></div>
 </div>
 </div>
 <div class="exp-timeline">
 <div class="exp-entry reveal">
 <div class="exp-design-label">Design-led Engineering Role</div>
 <div class="exp-entry-header">
-<div>
-<div class="exp-role">Software Engineer</div>
-<div class="exp-company">Principal Global Services · Pune</div>
-</div>
-<div class="exp-dates">2024 - Present</div>
+<div><div class="exp-role">Software Engineer</div><div class="exp-company">Principal Global Services · Pune</div></div>
+<div class="exp-dates">2024 — Present</div>
 </div>
 <ul class="exp-highlights">
-<li><strong>Retirement Wellness Dashboard</strong><span>Designed a clarity-first readiness view with prioritized hierarchy and decisive CTAs for complex financial scenarios.</span></li>
-<li><strong>EMA Marketing System</strong><span>Built a personalized, eligibility-based card system integrated into existing advisor workflows with minimal disruption.</span></li>
+<li><strong>Retirement Wellness Dashboard</strong><span>Designed a clarity-first readiness view with prioritised hierarchy and decisive CTAs for complex financial scenarios.</span></li>
+<li><strong>EMA Marketing System</strong><span>Built a personalised, eligibility-based card system integrated into existing advisor workflows with minimal disruption.</span></li>
 <li><strong>Accessibility Overhaul</strong><span>Led WCAG-compliant redesign across 12 components with stronger contrast and screen-reader-friendly interaction patterns.</span></li>
 </ul>
 </div>
 <div class="exp-entry reveal reveal-delay-1">
 <div class="exp-design-label">Foundation · Trainee + Intern</div>
 <div class="exp-entry-header">
-<div>
-<div class="exp-role">Trainee & Intern Software Engineer</div>
-<div class="exp-company">Principal Global Services · Pune</div>
-</div>
-<div class="exp-dates">Jan 2023 - Jul 2024</div>
+<div><div class="exp-role">Trainee &amp; Intern Software Engineer</div><div class="exp-company">Principal Global Services · Pune</div></div>
+<div class="exp-dates">Jan 2023 — Jul 2024</div>
 </div>
 <ul class="exp-highlights">
 <li><strong>Design System Migration</strong><span>Helped establish a reusable visual foundation with consistent spacing, components, and scalable theming.</span></li>
@@ -138,40 +123,33 @@
 </footer>
 
 <script>
-const hamburger = document.getElementById('hamburger');
-const drawer    = document.getElementById('navDrawer');
+const hamburger   = document.getElementById('hamburger');
+const drawer      = document.getElementById('navDrawer');
 const drawerClose = document.getElementById('drawerClose');
-const toggleDrawer = (open) => {
-  hamburger.classList.toggle('open', open);
-  drawer.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-};
-hamburger.addEventListener('click', () => toggleDrawer(true));
-drawerClose.addEventListener('click', () => toggleDrawer(false));
-drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleDrawer(false)));
+function openDrawer()  { hamburger.classList.add('open'); drawer.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeDrawer() { hamburger.classList.remove('open'); drawer.classList.remove('open'); document.body.style.overflow = ''; }
+hamburger.addEventListener('click', openDrawer);
+drawerClose.addEventListener('click',    closeDrawer);
+drawerClose.addEventListener('touchend', function(e){ e.preventDefault(); closeDrawer(); });
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
 
-const nav = document.getElementById("nav");
-const navLogo = document.querySelector(".nav-logo");
-const footer = document.querySelector("footer");
-const updateLogoVisibility = () => {
-  const scrollY = window.scrollY;
-  nav.classList.toggle("scrolled", scrollY > 60);
-  let hideLogo = false;
-  if (footer) hideLogo = scrollY + window.innerHeight > footer.offsetTop;
-  navLogo.classList.toggle("hidden", hideLogo);
-};
-window.addEventListener("scroll", updateLogoVisibility);
-updateLogoVisibility();
+const nav = document.getElementById('nav');
+const navLogo = document.querySelector('.nav-logo');
+const footerEl = document.querySelector('footer');
+function updateLogo() {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+  navLogo.classList.toggle('hidden', footerEl && window.scrollY + window.innerHeight > footerEl.offsetTop);
+}
+window.addEventListener('scroll', updateLogo);
+updateLogo();
 
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a, #navDrawer a').forEach(link => {
-  link.classList.toggle('active', link.getAttribute('href') === currentPage);
-});
+const cur = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a, #navDrawer a').forEach(l => l.classList.toggle('active', l.getAttribute('href') === cur));
 
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--body-font);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -39,24 +39,17 @@ body::before {
   opacity: 0.2;
 }
 
-p,
-li {
+p, li {
   font-family: var(--body-font);
   color: var(--copy-muted);
 }
 
-.point,
-.section-intro,
-.hmw-item p,
-.swatch-label,
-.timeline-step-title,
-.persona-name {
+.point, .section-intro, .hmw-item p, .swatch-label,
+.timeline-step-title, .persona-name {
   font-family: var(--body-font);
 }
 
-a {
-  color: inherit;
-}
+a { color: inherit; }
 
 .container {
   width: min(1120px, 92vw);
@@ -82,7 +75,7 @@ a {
 }
 
 .brand {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--body-font);
   font-size: 20px;
   color: var(--text);
   text-decoration: none;
@@ -94,13 +87,6 @@ a {
   color: var(--gold);
 }
 
-.brand em {
-  color: var(--gold);
-  font-style: normal;
-  font-weight: 600;
-}
-
-/* Back to Work — outline gold pill */
 .back-link {
   text-decoration: none;
   color: var(--gold);
@@ -125,14 +111,14 @@ a {
   position: relative;
 }
 
-/* Behance button floats top-right on desktop */
+/* Behance button: absolute on desktop, static on mobile */
 .hero .btn-primary {
   position: absolute;
   top: 36px;
   right: 0;
 }
 
-/* "View full case study on Behance" — identical style to Back to Work */
+/* Behance / "View full case study" button — same style as Back to Work */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -155,7 +141,7 @@ a {
   color: var(--bg);
 }
 
-/* ─── HERO HEADINGS — brown, bold ─── */
+/* ─── KICKER / HERO HEADINGS ─── */
 .kicker {
   display: inline-flex;
   align-items: center;
@@ -165,16 +151,12 @@ a {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  /* same brown as the "View Case Study" button on the homepage */
   color: var(--gold);
   margin-bottom: 10px;
 }
 
-.kicker::before {
-  display: none;
-}
+.kicker::before { display: none; }
 
-/* Main h1 — bold, brown (--text-brown matches the gold/brown of the btn) */
 .hero h1 {
   font-family: var(--body-font);
   font-size: clamp(32px, 5vw, 60px);
@@ -207,15 +189,23 @@ a {
   border-bottom: none;
 }
 
-/* Section h2 headings — brown, consistent with h1 */
 .section h2 {
   font-family: var(--body-font);
   font-size: clamp(22px, 3vw, 34px);
   font-weight: 700;
-  /* reduced gap between heading and content below */
   margin-bottom: 10px;
   margin-top: 0;
   color: var(--text-brown);
+}
+
+/* Sub-heading under "Figma Screens" / "High-Fidelity Wireframes" */
+.section-subheading {
+  font-family: var(--body-font);
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 14px;
+  line-height: 1.5;
 }
 
 .section-intro {
@@ -250,6 +240,31 @@ a {
   color: var(--gold);
 }
 
+/* ─── GALLERY — horizontal scroll with bottom padding for breathing room ─── */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 16px;
+  margin-top: 12px;
+  /* Extra space below the images inside the card */
+  padding-bottom: 28px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.gallery img {
+  flex: 0 0 auto;
+  width: 140px;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border: none;
+  background: transparent;
+  display: block;
+}
+
 /* ─── FOOTER ─── */
 footer {
   padding: 36px 0 24px;
@@ -276,34 +291,8 @@ footer {
   color: var(--gold);
 }
 
-/* ─── GALLERY ─── */
-.gallery {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  gap: 16px;
-  margin-top: 12px;
-  padding-bottom: 12px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--border) transparent;
-}
-
-.gallery img {
-  flex: 0 0 auto;
-  width: 140px;
-  height: auto;
-  max-height: 300px;
-  object-fit: contain;
-  border: none;
-  background: transparent;
-  display: block;
-}
-
 /* ─── OTHER ELEMENTS ─── */
-.meta-grid {
-  display: none;
-}
+.meta-grid { display: none; }
 
 .timeline-strip {
   display: flex;
@@ -467,13 +456,9 @@ footer {
   margin-top: 10px;
 }
 
-.section-content {
-  flex: 1;
-}
+.section-content { flex: 1; }
 
-.section-image-right {
-  flex: 1;
-}
+.section-image-right { flex: 1; }
 
 .section-image-right img {
   width: 100%;
@@ -504,9 +489,7 @@ footer {
 .reveal-delay-2 { transition-delay: 0.16s; }
 .reveal-delay-3 { transition-delay: 0.24s; }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE — TABLET
-═══════════════════════════════════════════ */
+/* ═══ TABLET ≤ 900px ═══ */
 @media (max-width: 900px) {
   .two-col,
   .persona-grid,
@@ -525,9 +508,7 @@ footer {
   }
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE — MOBILE
-═══════════════════════════════════════════ */
+/* ═══ MOBILE ≤ 600px ═══ */
 @media (max-width: 600px) {
   .topbar-inner {
     padding: 14px 0;
@@ -555,7 +536,6 @@ footer {
     font-size: 14px;
   }
 
-  /* Behance button full width on mobile */
   .hero .btn-primary {
     position: static;
     display: flex;
@@ -587,23 +567,9 @@ footer {
 }
 
 @media (max-width: 380px) {
-  .hero h1 {
-    font-size: 26px;
-  }
-
-  .timeline-step {
-    min-width: 60px;
-  }
-
-  .timeline-step-title {
-    font-size: 11px;
-  }
-
-  .container {
-    width: 94vw;
-  }
-
-  .gallery img {
-    width: 95px;
-  }
+  .hero h1 { font-size: 26px; }
+  .timeline-step { min-width: 60px; }
+  .timeline-step-title { font-size: 11px; }
+  .container { width: 94vw; }
+  .gallery img { width: 95px; }
 }

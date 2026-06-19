@@ -32,41 +32,30 @@
 <section class="section-pad">
 <div class="container">
 <div class="contact-grid">
+
 <div class="contact-left">
-<div class="contact-status-badge">
-<span class="status-dot"></span>Open to work
-</div>
+<div class="contact-status-badge"><span class="status-dot"></span>Open to work</div>
 <h2 class="contact-heading">Let's build something<br /><em>that matters.</em></h2>
-<p class="contact-body">
-I'm currently looking for full-time UI/UX roles at product companies where design and engineering work closely together. If you're building something complex that needs to feel simple, I'd love to talk.
-</p>
+<p class="contact-body">I'm currently looking for full-time UI/UX roles at product companies where design and engineering work closely together. If you're building something complex that needs to feel simple, I'd love to talk.</p>
 <div class="contact-links">
 <a href="mailto:ritika.hasani.0306@gmail.com" class="contact-link">
 <div class="contact-link-icon">✉</div>
-<div class="contact-link-text">
-<div class="contact-link-label">Email</div>
-<div class="contact-link-value">ritika.hasani.0306@gmail.com</div>
-</div>
+<div class="contact-link-text"><div class="contact-link-label">Email</div><div class="contact-link-value">ritika.hasani.0306@gmail.com</div></div>
 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
 </a>
 <a href="tel:+918999627602" class="contact-link">
 <div class="contact-link-icon">📞</div>
-<div class="contact-link-text">
-<div class="contact-link-label">Phone</div>
-<div class="contact-link-value">+91 · 8999 627 602</div>
-</div>
+<div class="contact-link-text"><div class="contact-link-label">Phone</div><div class="contact-link-value">+91 · 8999 627 602</div></div>
 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
 </a>
 <a href="https://www.linkedin.com/in/ritika-hasani-b477501a9" class="contact-link" target="_blank" rel="noopener noreferrer">
 <div class="contact-link-icon">in</div>
-<div class="contact-link-text">
-<div class="contact-link-label">LinkedIn</div>
-<div class="contact-link-value">linkedin.com/in/ritikahasani</div>
-</div>
+<div class="contact-link-text"><div class="contact-link-label">LinkedIn</div><div class="contact-link-value">linkedin.com/in/ritikahasani</div></div>
 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
 </a>
 </div>
 </div>
+
 <div class="contact-right reveal reveal-delay-2">
 <div class="contact-offer">
 <div class="contact-offer-label">What I bring</div>
@@ -84,6 +73,7 @@ I'm currently looking for full-time UI/UX roles at product companies where desig
 <div class="contact-offer-body">Available immediately for full-time roles, and open to hybrid or remote opportunities with teams in India or abroad.</div>
 </div>
 </div>
+
 </div>
 </div>
 </section>
@@ -99,40 +89,33 @@ I'm currently looking for full-time UI/UX roles at product companies where desig
 </footer>
 
 <script>
-const hamburger = document.getElementById('hamburger');
-const drawer    = document.getElementById('navDrawer');
+const hamburger   = document.getElementById('hamburger');
+const drawer      = document.getElementById('navDrawer');
 const drawerClose = document.getElementById('drawerClose');
-const toggleDrawer = (open) => {
-  hamburger.classList.toggle('open', open);
-  drawer.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-};
-hamburger.addEventListener('click', () => toggleDrawer(true));
-drawerClose.addEventListener('click', () => toggleDrawer(false));
-drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleDrawer(false)));
+function openDrawer()  { hamburger.classList.add('open'); drawer.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeDrawer() { hamburger.classList.remove('open'); drawer.classList.remove('open'); document.body.style.overflow = ''; }
+hamburger.addEventListener('click', openDrawer);
+drawerClose.addEventListener('click',    closeDrawer);
+drawerClose.addEventListener('touchend', function(e){ e.preventDefault(); closeDrawer(); });
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
 
-const nav = document.getElementById("nav");
-const navLogo = document.querySelector(".nav-logo");
-const footer = document.querySelector("footer");
-const updateLogoVisibility = () => {
-  const scrollY = window.scrollY;
-  nav.classList.toggle("scrolled", scrollY > 60);
-  let hideLogo = false;
-  if (footer) hideLogo = scrollY + window.innerHeight > footer.offsetTop;
-  navLogo.classList.toggle("hidden", hideLogo);
-};
-window.addEventListener("scroll", updateLogoVisibility);
-updateLogoVisibility();
+const nav = document.getElementById('nav');
+const navLogo = document.querySelector('.nav-logo');
+const footerEl = document.querySelector('footer');
+function updateLogo() {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+  navLogo.classList.toggle('hidden', footerEl && window.scrollY + window.innerHeight > footerEl.offsetTop);
+}
+window.addEventListener('scroll', updateLogo);
+updateLogo();
 
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a, #navDrawer a').forEach(link => {
-  link.classList.toggle('active', link.getAttribute('href') === currentPage);
-});
+const cur = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a, #navDrawer a').forEach(l => l.classList.toggle('active', l.getAttribute('href') === cur));
 
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
