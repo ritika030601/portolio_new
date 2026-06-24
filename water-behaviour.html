@@ -1,324 +1,232 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Water Behaviour Research — UX Case Study · Ritika Hasani</title>
-<link rel="stylesheet" href="case-study.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Behaviour Research - Ritika Hasani</title>
+  <link rel="stylesheet" href="case-study.css" />
 </head>
 <body>
 
+<!-- ═══════ TOP BAR ═══════ -->
 <header class="topbar">
   <div class="container topbar-inner">
     <a class="brand" href="index.html">Ritika <span>Hasani</span></a>
-    <a class="back-link" href="index.html#work">Back to Work</a>
+    <ul class="topbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="craft.html">About Me</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="connect.html">Connect</a></li>
+      <li><a href="minglemeal.html" class="next-link">Next Case Study &rarr;</a></li>
+    </ul>
   </div>
 </header>
 
 <main class="container">
 
-  <!-- HERO -->
+  <!-- Hero -->
   <section class="hero reveal">
-    <p class="kicker">Case Study · Consumer Behaviour Research</p>
-    <h1><span class="case-study-number">01.</span>Water Behaviour Research</h1>
+    <p class="kicker">Case Study 01 - Consumer Behaviour Research</p>
+    <h1><span class="case-study-number">01.</span> Water Behaviour Research</h1>
     <p>
-      A behavioural study into why people consistently reach for a new product when a perfectly usable one is already available — and what design can do about it.
+      A behavioural study on why users reach for a new product when a perfectly good one is already in front of them.
+      The research focuses on decision architecture, visibility, and the small design choices that make reuse feel like the obvious move.
     </p>
+    <a class="btn-primary" href="https://www.behance.net/gallery/249539001/UX-Case-Study-Water-behaviour-research" target="_blank" rel="noopener noreferrer">
+      View Full Case Study on Behance
+    </a>
   </section>
 
-  <!-- QUICK STATS -->
-  <div class="cs-stat-strip reveal">
-    <div class="cs-stat-item">
-      <div class="cs-stat-val">50+</div>
-      <div class="cs-stat-desc">Observed decisions</div>
+  <!-- Stats -->
+  <div class="stats-row reveal">
+    <div class="stat-cell">
+      <div class="stat-val">50+</div>
+      <div class="stat-label">Observed Decisions</div>
     </div>
-    <div class="cs-stat-item">
-      <div class="cs-stat-val">3</div>
-      <div class="cs-stat-desc">Research methods</div>
+    <div class="stat-cell">
+      <div class="stat-val">3</div>
+      <div class="stat-label">Research Methods</div>
     </div>
-    <div class="cs-stat-item">
-      <div class="cs-stat-val">4</div>
-      <div class="cs-stat-desc">Behavioural patterns</div>
+    <div class="stat-cell">
+      <div class="stat-val">4</div>
+      <div class="stat-label">Behavioural Patterns</div>
     </div>
-    <div class="cs-stat-item">
-      <div class="cs-stat-val">Pure UX</div>
-      <div class="cs-stat-desc">Research — no screens</div>
+    <div class="stat-cell">
+      <div class="stat-val">0</div>
+      <div class="stat-label">Screens Designed</div>
     </div>
   </div>
 
-  <!-- 01 CONTEXT -->
+  <!-- 01 / Context -->
   <section class="section reveal">
-    <span class="section-label">01 / Context</span>
-    <h2>Why this study matters</h2>
-    <p class="section-intro">
-      In offices, homes, and shared spaces, people make the same unconscious choice every day: open something new when an existing option is right there. This pattern isn't about carelessness — it's about how our brains make quick decisions under uncertainty. As a UX researcher, I wanted to understand that mechanism because the same decision logic plays out in every interface: users default to the familiar, the clear, and the low-risk option. Design that ignores this loses people at the moment of choice.
-    </p>
-    <p class="section-intro" style="margin-top: 12px;">
-      This research was not focused on a specific product. It was focused on a behaviour pattern — and the design principles that emerge from understanding it are applicable across products, services, and interfaces.
-    </p>
-  </section>
-
-  <!-- 02 RESEARCH APPROACH -->
-  <section class="section reveal">
-    <span class="section-label">02 / Research Approach</span>
-    <h2>How I researched this</h2>
-    <p class="section-intro">
-      I used three methods to build a complete picture — observation to see what people actually do, interviews to understand why they think they did it, and cognitive testing to isolate the specific variables that triggered the "choose new" behaviour.
-    </p>
-
-    <div class="cs-steps">
-      <div class="cs-step">
-        <div class="cs-step-num">Method 01</div>
-        <div class="cs-step-body">
-          <h4>Field Observation</h4>
-          <p>I observed users in natural, uncontrolled environments — offices, common areas, and home kitchens — without prompting them to change their behaviour. I tracked over 50 moments where a user had a real choice between an already-open or previously-used option and a fresh, new one. I noted what they chose, how long the decision took, and whether they verbalised any reasoning.</p>
-        </div>
+    <p class="section-label">01 / Context</p>
+    <div class="section-two-col">
+      <div class="section-text">
+        <h2>Why this study matters</h2>
+        <p>
+          In offices, homes, and shared spaces, people make the same unconscious choice every day: open something new when
+          an existing option is right there. This pattern is not about carelessness - it is about how our brains make quick
+          decisions under uncertainty. As a UX researcher, I wanted to understand that mechanism because the same decision
+          logic plays out in every interface: users default to the familiar, the clear, and the low-risk option. Design that
+          ignores this loses people at the moment of choice.
+        </p>
       </div>
-      <div class="cs-step">
-        <div class="cs-step-num">Method 02</div>
-        <div class="cs-step-body">
-          <h4>Contextual Interviews</h4>
-          <p>After observing these choices, I spoke with the same users about their reasoning — within minutes of the decision, while their thinking was still fresh. I used open-ended questions: "What went through your mind when you made that choice?" and "What would have made you choose the other option?" I specifically avoided leading questions about freshness or hygiene to let the real reasons surface.</p>
-        </div>
-      </div>
-      <div class="cs-step">
-        <div class="cs-step-num">Method 03</div>
-        <div class="cs-step-body">
-          <h4>Cognitive Load Testing</h4>
-          <p>I ran controlled tests where I varied a single variable at a time: how visible the existing option's status was, how close it was physically, and whether a simple trust indicator (like a clear label or timestamp) was present. I measured choice speed and which option was selected to understand what actually moved the needle — not just what users said moved the needle.</p>
-        </div>
+      <div class="section-text">
+        <p>
+          This research was not focused on a specific product. It was focused on a behaviour pattern - and the design
+          principles that emerge from understanding it are applicable across products, services, and interfaces.
+        </p>
+        <p>
+          What I found was surprising: the problem is rarely about freshness or cleanliness. It is about perceived state.
+          When users cannot instantly tell whether something is ready to use, they skip it. They choose new not because
+          new is better, but because new is safe.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- 03 WHAT I FOUND -->
+  <!-- 02 / Research Approach -->
   <section class="section reveal">
-    <span class="section-label">03 / Key Findings</span>
-    <h2>What I observed</h2>
+    <p class="section-label">02 / Research Approach</p>
+    <h2>How I studied the behaviour</h2>
     <p class="section-intro">
-      Across all 50+ observed decisions, the pattern was consistent: when an existing option required any mental assessment at all, users chose new. The threshold for "too much effort to evaluate" was extremely low — even a moment of uncertainty was enough to tip the decision.
+      I combined three methods to get a complete picture: passive observation to watch behaviour naturally, timed
+      decision tasks to measure speed and confidence, and follow-up interviews to understand the reasoning behind each choice.
     </p>
-
-    <div class="cs-quote">
-      <blockquote>"I just wasn't sure if it was still okay to use. Opening a new one felt safer — it only takes a second."</blockquote>
-      <cite>— Office worker, Pune · observed choosing a new product over an available existing one</cite>
-    </div>
-
-    <div class="cs-quote">
-      <blockquote>"I don't want to have to think about it. New means I know it's fine."</blockquote>
-      <cite>— Home user · post-decision interview</cite>
-    </div>
-
-    <p class="section-intro">
-      The word that came up repeatedly was "sure." Users weren't certain their choice would be wrong — they just weren't <em>certain</em> it would be right. That asymmetry drove everything.
-    </p>
-  </section>
-
-  <!-- 04 CORE INSIGHT -->
-  <section class="section reveal">
-    <span class="section-label">04 / Core Insight</span>
-
-    <div class="cs-insight">
-      <span class="cs-insight-label">The central finding</span>
-      <p class="cs-insight-text">
-        The problem isn't that people are wasteful. It's that existing options carry an invisible cognitive tax — the mental effort of assessing whether something is still suitable to use. New options arrive pre-answered. When the effort of evaluating an existing option exceeds even a few seconds, people always choose new.
-      </p>
-    </div>
-
-    <p class="section-intro">
-      This finding reframed the design challenge entirely. The question is not "how do we persuade users to reuse?" The question is "how do we eliminate the assessment burden so reuse requires no more mental effort than choosing something new?"
-    </p>
-  </section>
-
-  <!-- 05 DECISION FLOW -->
-  <section class="section reveal">
-    <span class="section-label">05 / Decision Flow</span>
-    <h2>The psychological journey</h2>
-    <p class="section-intro">
-      I mapped the decision process users went through. The key fork in the road is the assessment moment — and the fastest exit from assessment is always "choose new."
-    </p>
-
-    <!-- Flow diagram: existing option path -->
-    <p style="font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); font-family:'Monaco','Courier New',monospace; margin-bottom:10px; margin-top:20px;">Existing option path</p>
-    <div class="cs-flow-h">
-      <div class="cs-flow-node cs-flow-node-problem">
-        <span class="cs-flow-node-label">Start</span>
-        <p>User needs the product</p>
-      </div>
-      <span class="cs-flow-arrow">→</span>
-      <div class="cs-flow-node cs-flow-node-problem">
-        <span class="cs-flow-node-label">Sees</span>
-        <p>Existing option visible</p>
-      </div>
-      <span class="cs-flow-arrow">→</span>
-      <div class="cs-flow-node cs-flow-node-problem">
-        <span class="cs-flow-node-label">Asks</span>
-        <p>Is this still good?</p>
-      </div>
-      <span class="cs-flow-arrow">→</span>
-      <div class="cs-flow-node cs-flow-node-problem">
-        <span class="cs-flow-node-label">Feels</span>
-        <p>Uncertainty — unclear state</p>
-      </div>
-      <span class="cs-flow-arrow">→</span>
-      <div class="cs-flow-node cs-flow-node-problem">
-        <span class="cs-flow-node-label">Decides</span>
-        <p>Skip it. Too much effort.</p>
-      </div>
-    </div>
-
-    <!-- Flow diagram: new option path -->
-    <p style="font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); font-family:'Monaco','Courier New',monospace; margin-bottom:10px; margin-top:24px;">New option path</p>
-    <div class="cs-flow-h">
-      <div class="cs-flow-node cs-flow-node-outcome">
-        <span class="cs-flow-node-label">Start</span>
-        <p>User needs the product</p>
-      </div>
-      <span class="cs-flow-arrow">→</span>
-      <div class="cs-flow-node cs-flow-node-outcome">
-        <span class="cs-flow-node-label">Sees</span>
-        <p>New option visible</p>
-      </div>
-      <span class="cs-flow-arrow">→</span>
-      <div class="cs-flow-node cs-flow-node-outcome">
-        <span class="cs-flow-node-label">Feels</span>
-        <p>No assessment needed</p>
-      </div>
-      <span class="cs-flow-arrow">→</span>
-      <div class="cs-flow-node cs-flow-node-outcome">
-        <span class="cs-flow-node-label">Decides</span>
-        <p>Chooses new instantly</p>
-      </div>
+    <div class="points">
+      <div class="point">Observed 50+ natural decision moments in shared spaces - offices, kitchens, waiting areas - without interfering with normal behaviour.</div>
+      <div class="point">Ran timed choice tasks where participants had to pick between a labelled existing option and an unlabelled new one. I measured both speed and perceived confidence.</div>
+      <div class="point">Conducted follow-up interviews focused on the emotional side of the decision: what made the existing option feel uncertain, and what would have made it feel safe to use.</div>
     </div>
   </section>
 
-  <!-- 06 BEHAVIORAL PATTERNS -->
-  <section class="section reveal">
-    <span class="section-label">06 / Behavioural Patterns</span>
-    <h2>Four patterns I identified</h2>
-    <p class="section-intro">
-      These four patterns appeared consistently across all observations and interview groups. They are not unique to one context — they reflect how humans make low-stakes decisions under uncertainty.
+  <!-- 03 / Decision Flow -->
+  <section class="flow-section reveal">
+    <p class="section-label">03 / Decision Flow</p>
+    <h2>The fork in the road</h2>
+    <p class="flow-intro">
+      I mapped the decision process users went through. The key fork is the assessment moment - and the fastest exit
+      from assessment is always "choose new."
     </p>
 
-    <div class="cs-pattern-grid">
-      <div class="cs-pattern">
-        <span class="cs-pattern-num">Pattern 01</span>
-        <h4>The Freshness Bias</h4>
-        <p>Users consistently associated "new" with "safe." This was not a rational calculation — it was an emotional shortcut. A sealed, untouched product carries zero perceived risk. An existing one requires trust, and trust requires evidence. New products arrive pre-trusted.</p>
-      </div>
-      <div class="cs-pattern">
-        <span class="cs-pattern-num">Pattern 02</span>
-        <h4>Visibility Gaps</h4>
-        <p>When users could not immediately read the state of an existing option — how much was left, when it was last used, whether it was still usable — they defaulted to new. Ambiguity was never resolved in favour of the existing option. Ambiguity always resolved to: choose new.</p>
-      </div>
-      <div class="cs-pattern">
-        <span class="cs-pattern-num">Pattern 03</span>
-        <h4>The Assessment Burden</h4>
-        <p>Choosing to reuse requires answering a question: "Is this still good?" That question, even when subconscious, creates friction. It takes cognitive energy. New options come pre-answered. The decision to reuse requires effort; the decision to choose new requires none.</p>
-      </div>
-      <div class="cs-pattern">
-        <span class="cs-pattern-num">Pattern 04</span>
-        <h4>Proximity Override</h4>
-        <p>Even when the existing option was physically closer, users often chose new. Physical convenience mattered less than psychological certainty. I expected proximity to be a stronger factor. It wasn't. Certainty consistently beat convenience.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 07 DESIGN PRINCIPLES -->
-  <section class="section reveal">
-    <span class="section-label">07 / Design Response</span>
-    <h2>What design can change</h2>
-    <p class="section-intro">
-      This research wasn't about shaming the "choose new" behaviour — it was about understanding what design would need to do to make reuse feel equally effortless. Four principles emerged.
-    </p>
-
-    <div class="cs-principle-list">
-      <div class="cs-principle">
-        <div class="cs-principle-icon">👁</div>
-        <div class="cs-principle-body">
-          <h4>Make status readable at a glance</h4>
-          <p>Users shouldn't have to think about whether something is suitable to use. If the current state — freshness, quantity, condition — is immediately visible and legible, the assessment burden disappears. Status should be the first thing seen, not something a user has to look for.</p>
+    <div class="flow-group">
+      <p class="flow-group-label">Existing Option Path</p>
+      <div class="flow-row">
+        <div class="flow-step">
+          <div class="flow-step-label">Start</div>
+          <div class="flow-step-text">User needs the product</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step">
+          <div class="flow-step-label">Sees</div>
+          <div class="flow-step-text">Existing option visible</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step">
+          <div class="flow-step-label">Asks</div>
+          <div class="flow-step-text">Is this still good?</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step">
+          <div class="flow-step-label">Feels</div>
+          <div class="flow-step-text">Uncertainty - unclear state</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step">
+          <div class="flow-step-label">Decides</div>
+          <div class="flow-step-text">Skip it. Too much effort.</div>
         </div>
       </div>
-      <div class="cs-principle">
-        <div class="cs-principle-icon">✅</div>
-        <div class="cs-principle-body">
-          <h4>Provide explicit trust cues</h4>
-          <p>A timestamp, a clear indicator, a label that says "still good" — these pre-answer the question users were going to ask anyway. When design answers the question before the user asks it, the assessment burden is removed. The cognitive tax drops to zero.</p>
+    </div>
+
+    <div class="flow-group">
+      <p class="flow-group-label">New Option Path</p>
+      <div class="flow-row">
+        <div class="flow-step">
+          <div class="flow-step-label">Start</div>
+          <div class="flow-step-text">User needs the product</div>
         </div>
-      </div>
-      <div class="cs-principle">
-        <div class="cs-principle-icon">⬆</div>
-        <div class="cs-principle-body">
-          <h4>Position reuse as the default path</h4>
-          <p>In any interface where reuse is desirable, the existing option should be the path of least resistance — not the new option. This means hierarchy, placement, and visual weight all need to favour the existing option. Make reuse feel like the obvious choice, not the considered one.</p>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step">
+          <div class="flow-step-label">Sees</div>
+          <div class="flow-step-text">New option visible</div>
         </div>
-      </div>
-      <div class="cs-principle">
-        <div class="cs-principle-icon">⚡</div>
-        <div class="cs-principle-body">
-          <h4>Pre-answer the user's question</h4>
-          <p>The moment a user has to wonder "is this okay?" you've already lost them. Design should surface the answer before the question arises. Whether that's a freshness indicator, a clear availability signal, or a simple "last updated" timestamp — the goal is zero uncertainty, not reduced uncertainty.</p>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step">
+          <div class="flow-step-label">Feels</div>
+          <div class="flow-step-text">No assessment needed</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step">
+          <div class="flow-step-label">Decides</div>
+          <div class="flow-step-text">Chooses new instantly</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 08 OUTCOMES -->
+  <!-- 04 / Behavioural Patterns -->
   <section class="section reveal">
-    <span class="section-label">08 / What Success Looks Like</span>
-    <h2>Measuring the impact</h2>
+    <p class="section-label">04 / Behavioural Patterns</p>
+    <h2>What I kept seeing</h2>
     <p class="section-intro">
-      This was a research study, not a shipped product. But the design principles it produced are testable. If applied to a real product or interface, success would be measured as follows:
+      Four patterns showed up consistently across all participants and contexts. These were not outliers - they were the norm.
     </p>
-
-    <div class="cs-outcomes">
-      <div class="cs-outcome">
-        <div class="cs-outcome-val">↑ Reuse rate</div>
-        <span class="cs-outcome-label">Primary metric</span>
-        <div class="cs-outcome-desc">Percentage of decisions where the existing option is chosen when status is clearly displayed vs. unclear.</div>
-      </div>
-      <div class="cs-outcome">
-        <div class="cs-outcome-val">↓ Decision time</div>
-        <span class="cs-outcome-label">Speed metric</span>
-        <div class="cs-outcome-desc">Time taken to make a choice when trust cues are present vs. absent. Less hesitation = lower assessment burden.</div>
-      </div>
-      <div class="cs-outcome">
-        <div class="cs-outcome-val">↑ Confidence score</div>
-        <span class="cs-outcome-label">Qualitative metric</span>
-        <div class="cs-outcome-desc">User-reported confidence in the existing option when a clear status indicator is present. Target: users feel as certain about reuse as they do about choosing new.</div>
-      </div>
-    </div>
-
-    <div class="cs-insight" style="margin-top: 28px;">
-      <span class="cs-insight-label">What I learned from this</span>
-      <p class="cs-insight-text">
-        This research changed how I think about every interface decision. The "choose new" bias isn't a water problem — it's a cognitive load problem. Any time a user has to assess the state of something before they can use it, design has created friction. The best interfaces pre-answer the question. The best products remove the assessment burden entirely.
-      </p>
-    </div>
-
-    <div class="cs-behance-note">
-      Full process documentation, observation notes, and interview transcripts are available on Behance. <a href="https://www.behance.net/gallery/249539001/UX-Case-Study-Water-behaviour-research" target="_blank" rel="noopener noreferrer">View on Behance →</a>
+    <div class="points">
+      <div class="point"><strong>Sealed Illusion:</strong> Users perceived sealed or wrapped products as categorically cleaner, regardless of actual condition. Packaging signals freshness even when freshness is not in question.</div>
+      <div class="point"><strong>State Ambiguity:</strong> When an existing option lacked clear visual signals about its condition, users defaulted to skipping it. They did not investigate - they just moved on.</div>
+      <div class="point"><strong>Effort Calculus:</strong> The decision to assess an existing option was treated like a small cost. If that cost was non-zero, users chose the zero-effort alternative: something new.</div>
+      <div class="point"><strong>Validation Gap:</strong> Users wanted permission to reuse. A simple label, date stamp, or trust cue was enough to overcome the default bias toward new. Without it, the default won every time.</div>
     </div>
   </section>
+
+  <!-- 05 / Design Implications -->
+  <section class="section reveal">
+    <p class="section-label">05 / Design Implications</p>
+    <h2>What this means for UX</h2>
+    <p class="section-intro">
+      These patterns are not limited to physical products. The same logic applies to every interface where users choose
+      between an existing state and a new one.
+    </p>
+    <div class="points">
+      <div class="point">Make the state of existing options immediately legible. If users cannot read the state at a glance, they will ignore it.</div>
+      <div class="point">Use validation cues - timestamps, status indicators, progress markers - to reduce the perceived risk of engaging with something that already exists.</div>
+      <div class="point">Position the existing or recommended option first, with the highest visual weight. Do not make users hunt for the low-friction path.</div>
+      <div class="point">Reduce cognitive load at the moment of choice. Every assessment step you ask users to take is a step toward "choose new." Design decisions should happen before the user arrives, not at the moment of arrival.</div>
+    </div>
+  </section>
+
+  <!-- Footer nav -->
+  <div class="cs-footer reveal">
+    <div>
+      <div class="cs-footer-label">Next Case Study</div>
+      <div class="cs-footer-title">MingleMeal &rarr;</div>
+    </div>
+    <a class="btn-primary" href="minglemeal.html">View MingleMeal</a>
+  </div>
 
 </main>
 
-<footer class="container">
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="craft.html">About Me</a>
-    <a href="journey.html">Journey</a>
-    <a href="connect.html">Connect</a>
-    <a href="minglemeal.html">Next Case Study →</a>
-  </div>
-</footer>
-
 <script>
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("visible");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+  // Mark active nav link
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".topbar-nav a").forEach((link) => {
+    if (link.getAttribute("href") === currentPage) link.classList.add("active");
+  });
 </script>
+
 </body>
 </html>

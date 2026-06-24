@@ -1,396 +1,165 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MingleMeal — UX Case Study · Ritika Hasani</title>
-<link rel="stylesheet" href="case-study.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MingleMeal Case Study - Ritika Hasani</title>
+  <link rel="stylesheet" href="case-study.css" />
 </head>
 <body>
 
+<!-- ═══════ TOP BAR ═══════ -->
 <header class="topbar">
   <div class="container topbar-inner">
     <a class="brand" href="index.html">Ritika <span>Hasani</span></a>
-    <a class="back-link" href="index.html#work">Back to Work</a>
+    <ul class="topbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="craft.html">About Me</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="connect.html">Connect</a></li>
+      <li><a href="avptivo.html" class="next-link">Next Case Study &rarr;</a></li>
+    </ul>
   </div>
 </header>
 
 <main class="container">
 
-  <!-- HERO -->
+  <!-- Hero -->
   <section class="hero reveal">
-    <p class="kicker">Case Study · Food Rescue · UX Research + Wireframes</p>
-    <h1><span class="case-study-number">03.</span>MingleMeal</h1>
+    <p class="kicker">Case Study 02 - Food Rescue Network</p>
+    <h1><span class="case-study-number">02.</span> MingleMeal</h1>
     <p>
-      A platform that connects restaurants with surplus food to NGOs who can redistribute it — designed around the hardest constraint in food rescue: the food won't wait. This is the complete story of the research, the flows, and the design decisions behind it.
+      MingleMeal connects restaurants, volunteers, and NGOs to simplify food rescue logistics and cut down on waste
+      through a role-based product flow built around clarity and speed.
     </p>
+    <a class="btn-primary" href="https://www.behance.net/gallery/241672603/MingleMeal" target="_blank" rel="noopener noreferrer">
+      View Full Case Study on Behance
+    </a>
   </section>
 
-  <!-- QUICK STATS -->
-  <div class="cs-stat-strip reveal">
-    <div class="cs-stat-item">
-      <div class="cs-stat-val">3</div>
-      <div class="cs-stat-desc">User types</div>
+  <!-- Stats -->
+  <div class="stats-row reveal">
+    <div class="stat-cell">
+      <div class="stat-val">3</div>
+      <div class="stat-label">User Types</div>
     </div>
-    <div class="cs-stat-item">
-      <div class="cs-stat-val">12+</div>
-      <div class="cs-stat-desc">User interviews</div>
+    <div class="stat-cell">
+      <div class="stat-val">12+</div>
+      <div class="stat-label">User Interviews</div>
     </div>
-    <div class="cs-stat-item">
-      <div class="cs-stat-val">1</div>
-      <div class="cs-stat-desc">Shared system</div>
+    <div class="stat-cell">
+      <div class="stat-val">1</div>
+      <div class="stat-label">Shared System</div>
     </div>
-    <div class="cs-stat-item">
-      <div class="cs-stat-val">Hi-Fi</div>
-      <div class="cs-stat-desc">Wireframes</div>
+    <div class="stat-cell">
+      <div class="stat-val">Hi-Fi</div>
+      <div class="stat-label">Wireframes</div>
     </div>
   </div>
 
-  <!-- 01 CONTEXT -->
+  <!-- 01 / Context -->
   <section class="section reveal">
-    <span class="section-label">01 / Context</span>
-    <h2>The problem with food rescue</h2>
-    <p class="section-intro">
-      Every evening, restaurants throw away food that was prepared but not sold. Meanwhile, NGOs that feed communities are often one step behind — they find out about donations too late, can't arrange pickup in time, and the food is already gone. The infrastructure for redistribution exists: restaurants, drivers, and NGOs are all willing to participate. The coordination is what breaks down.
-    </p>
-    <p class="section-intro" style="margin-top:12px;">
-      MingleMeal is a platform designed to fix that coordination problem. But unlike a typical logistics app with one user type, this one needed to serve three completely different users simultaneously — each with different goals, different constraints, and different definitions of what "working" means.
-    </p>
+    <p class="section-label">01 / Context</p>
+    <div class="section-two-col">
+      <div class="section-text">
+        <h2>The problem with food rescue</h2>
+        <p>
+          Every evening, restaurants throw away food that was prepared but not sold. Meanwhile, NGOs that feed communities
+          are often one step behind - they find out about donations too late, cannot arrange pickup in time, and the food
+          is already gone. The infrastructure for redistribution exists: restaurants, drivers, and NGOs are all willing to
+          participate. The coordination is what breaks down.
+        </p>
+      </div>
+      <div class="section-text">
+        <p>
+          After talking to people across all three user groups, it became clear that the problem was not motivation - it
+          was timing and visibility. Restaurants did not know who to notify. Drivers did not know where to go or what
+          they were picking up. NGOs did not know what was coming or when. Everyone had different definitions of what
+          "working" means.
+        </p>
+        <p>
+          The goal became designing one shared system that could speak three different languages - and still get the food
+          where it needed to go.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <!-- 02 RESEARCH -->
+  <!-- 02 / Research -->
   <section class="section reveal">
-    <span class="section-label">02 / Research</span>
+    <p class="section-label">02 / Research</p>
     <h2>What I found when I listened</h2>
     <p class="section-intro">
-      I started by talking to each user group separately, before I touched a single wireframe. What became clear immediately was that each group had a completely different mental model of "the problem" — and any design that tried to solve all three from the same perspective would fail all three.
+      I started by talking to each user group separately, before I touched a single wireframe. What became clear
+      immediately was that each group had a completely different mental model of the problem - and any design that tried
+      to solve all three from the same perspective would fail all three.
     </p>
-
-    <div class="cs-steps">
-      <div class="cs-step">
-        <div class="cs-step-num">Research 01</div>
-        <div class="cs-step-body">
-          <h4>Restaurant interviews (Donors)</h4>
-          <p>I spoke with restaurant managers and kitchen staff about their current process for handling surplus food. The dominant theme was time pressure. Restaurants operate on tight margins and tight schedules. They wanted to donate — but they couldn't hold food indefinitely waiting for someone to collect it. If no one confirmed pickup within a window, the food would be discarded rather than risk keeping it past service hours.</p>
-        </div>
-      </div>
-      <div class="cs-step">
-        <div class="cs-step-num">Research 02</div>
-        <div class="cs-step-body">
-          <h4>NGO interviews (Receivers)</h4>
-          <p>NGO coordinators described a recurring failure point: they'd receive a call about available food when it was already too late to arrange collection. Availability wasn't the issue — speed was. They needed earlier notice, a way to claim food before it became urgent, and clear confirmation that a driver was on the way. Without those signals, coordinating volunteers was chaotic.</p>
-        </div>
-      </div>
-      <div class="cs-step">
-        <div class="cs-step-num">Research 03</div>
-        <div class="cs-step-body">
-          <h4>Driver interviews (Connectors)</h4>
-          <p>Volunteer drivers described a different set of frustrations: wrong pickup addresses, contacts who didn't answer, food that had already been discarded by the time they arrived. The handoff moments — pickup from restaurant, delivery to NGO — were the points of highest failure. Drivers needed clear, verified information and a way to confirm handoffs unambiguously at both ends.</p>
-        </div>
-      </div>
+    <div class="points">
+      <div class="point"><strong>Restaurants</strong> wanted to donate but dreaded the admin. They needed a single tap - log what is available, set a window, done. Anything more was a barrier.</div>
+      <div class="point"><strong>Drivers</strong> needed clarity above all else. What am I picking up, where exactly, and when? Ambiguity meant delays, and delays meant food going cold.</div>
+      <div class="point"><strong>NGOs</strong> needed predictability. They could plan around a confirmed pickup, but not around a "maybe." Real-time status updates were not a nice-to-have - they were essential.</div>
     </div>
   </section>
 
-  <!-- 03 USER QUOTES -->
+  <!-- 03 / The Solution -->
   <section class="section reveal">
-    <span class="section-label">03 / User Voices</span>
-    <h2>In their own words</h2>
-
-    <div class="cs-quote">
-      <blockquote>"We want to donate, but we can't have staff waiting around. If no one shows up in 20 minutes after service ends, we have to throw it out. That's just our reality."</blockquote>
-      <cite>— Restaurant Manager, Pune · donor interview</cite>
-    </div>
-
-    <div class="cs-quote">
-      <blockquote>"The problem isn't availability. It's speed. Food doesn't wait. By the time we hear about a donation and arrange a volunteer, it's often already gone."</blockquote>
-      <cite>— NGO Operations Lead · receiver interview</cite>
-    </div>
-
-    <div class="cs-quote">
-      <blockquote>"I've driven to three restaurants this week where the food was already disposed of. No one called. No one updated the listing. I just showed up and it was done."</blockquote>
-      <cite>— Volunteer Driver · connector interview</cite>
-    </div>
-
-    <div class="cs-insight">
-      <span class="cs-insight-label">Research synthesis</span>
-      <p class="cs-insight-text">
-        All three users were failing because of the same root cause: no shared, real-time picture of what was happening. The restaurant didn't know if anyone was coming. The NGO didn't know if a driver was confirmed. The driver didn't know if the food was still there. Solving MingleMeal meant creating that shared visibility — and doing it fast enough that food wouldn't spoil while users waited for information.
-      </p>
-    </div>
-  </section>
-
-  <!-- 04 PERSONAS -->
-  <section class="section reveal">
-    <span class="section-label">04 / Who Uses This</span>
-    <h2>Three users, one system</h2>
+    <p class="section-label">03 / Solution</p>
+    <h2>One system, three flows</h2>
     <p class="section-intro">
-      The biggest structural challenge of MingleMeal is that it can't be designed for one user type. Each role has distinct goals, distinct friction points, and distinct mental models. Here's how I defined each one.
+      The design answer was a single shared platform with role-specific entry points. Each user type sees only what they
+      need - nothing more, nothing less - but every action they take updates the same underlying state.
     </p>
-
-    <div class="cs-personas">
-      <div class="cs-persona">
-        <span class="cs-persona-role">User Type 01</span>
-        <h4>The Restaurant — Donor</h4>
-        <p class="cs-persona-goal">
-          <strong style="color:var(--text);font-weight:600;">Goal:</strong> Post surplus food quickly and get confirmation it will be collected — without keeping staff waiting.
-        </p>
-        <p class="cs-persona-goal">
-          <strong style="color:var(--text);font-weight:600;">Constraint:</strong> Time. Food has a hard expiry window post-service. Anything that adds steps or delays loses them.
-        </p>
-        <div class="cs-persona-pain">
-          <strong>Core pain:</strong> Uncertainty about whether anyone is coming — and no way to know without calling.
-        </div>
-      </div>
-      <div class="cs-persona">
-        <span class="cs-persona-role">User Type 02</span>
-        <h4>The NGO — Receiver</h4>
-        <p class="cs-persona-goal">
-          <strong style="color:var(--text);font-weight:600;">Goal:</strong> Maximise the quantity and quality of food received for redistribution.
-        </p>
-        <p class="cs-persona-goal">
-          <strong style="color:var(--text);font-weight:600;">Constraint:</strong> Volunteer coordination. They can't dispatch someone without confirmation that the food and a driver are both secured.
-        </p>
-        <div class="cs-persona-pain">
-          <strong>Core pain:</strong> Finding out about donations too late to act on them effectively.
-        </div>
-      </div>
-      <div class="cs-persona">
-        <span class="cs-persona-role">User Type 03</span>
-        <h4>The Driver — Connector</h4>
-        <p class="cs-persona-goal">
-          <strong style="color:var(--text);font-weight:600;">Goal:</strong> Complete pickup and delivery efficiently, on a schedule that fits around other commitments.
-        </p>
-        <p class="cs-persona-goal">
-          <strong style="color:var(--text);font-weight:600;">Constraint:</strong> Reliability of information. Wrong details waste their time and erode their willingness to volunteer again.
-        </p>
-        <div class="cs-persona-pain">
-          <strong>Core pain:</strong> Arriving at a pickup point to find the food is already gone, with no prior notification.
-        </div>
-      </div>
+    <div class="points">
+      <div class="point">Restaurants log a donation in under a minute. The app prompts for food type, quantity, and pickup window - and then handles the rest.</div>
+      <div class="point">Drivers receive a pickup brief with address, food details, and delivery contact. QR verification at pickup and drop-off creates a clear handoff record.</div>
+      <div class="point">NGOs see live status for incoming food - from logged to in transit to delivered. No more waiting by the phone. No more uncertainty about whether food is actually on the way.</div>
     </div>
   </section>
 
-  <!-- 05 USER FLOW -->
+  <!-- 04 / Screens -->
   <section class="section reveal">
-    <span class="section-label">05 / How It All Flows</span>
-    <h2>The end-to-end service flow</h2>
-    <p class="section-intro">
-      Before designing a single screen, I mapped the complete service flow across all three roles. This was the single most important step — because it revealed where the coordination broke down and what information each user needed at each moment.
-    </p>
-
-    <div class="cs-flow-table">
-      <!-- Headers -->
-      <div class="cs-flow-thead-cell">🍽 Restaurant</div>
-      <div class="cs-flow-thead-cell">🚗 Driver</div>
-      <div class="cs-flow-thead-cell">🤝 NGO</div>
-
-      <!-- Row 1 -->
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 01</span>
-        Post surplus food listing with quantity, type, and pickup window
-      </div>
-      <div class="cs-flow-td empty">—</div>
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 01</span>
-        Receives real-time alert — food available nearby
-      </div>
-
-      <!-- Row 2 -->
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 02</span>
-        Receives confirmation: NGO has claimed the listing
-      </div>
-      <div class="cs-flow-td empty">—</div>
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 02</span>
-        Claims the listing — commits to receiving the food
-      </div>
-
-      <!-- Row 3 -->
-      <div class="cs-flow-td empty">—</div>
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 03</span>
-        Receives pickup assignment with verified address and contact
-      </div>
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 03</span>
-        Assigns or confirms a driver; sees driver ETA
-      </div>
-
-      <!-- Row 4 -->
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 04</span>
-        Driver arrives — QR code scanned at pickup to verify handoff
-      </div>
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 04</span>
-        Scans QR at restaurant to confirm pickup — unambiguous verification
-      </div>
-      <div class="cs-flow-td empty">—</div>
-
-      <!-- Row 5 -->
-      <div class="cs-flow-td empty">—</div>
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 05</span>
-        Delivers to NGO — second QR scan confirms delivery
-      </div>
-      <div class="cs-flow-td filled">
-        <span class="tag">Step 05</span>
-        Receives delivery — confirms receipt, closes the loop
-      </div>
-
-      <!-- Row 6 -->
-      <div class="cs-flow-td filled">
-        <span class="tag">Complete</span>
-        Sees donation confirmed and completed — no follow-up needed
-      </div>
-      <div class="cs-flow-td filled">
-        <span class="tag">Complete</span>
-        Trip complete — contribution logged
-      </div>
-      <div class="cs-flow-td filled">
-        <span class="tag">Complete</span>
-        Food received and logged — ready for redistribution
-      </div>
-    </div>
-
-    <p class="section-intro" style="margin-top: 16px;">
-      Mapping this flow revealed the two highest-risk handoff points: the pickup moment (where food could be discarded before the driver arrived) and the delivery confirmation (where NGOs had no way to formally close the loop). Both became the basis for the QR verification system.
-    </p>
-  </section>
-
-  <!-- 06 DESIGN DECISIONS -->
-  <section class="section reveal">
-    <span class="section-label">06 / Design Decisions</span>
-    <h2>Why I made the choices I made</h2>
-    <p class="section-intro">
-      Every key screen in MingleMeal is the result of a specific decision. Here are the four that shaped the product most.
-    </p>
-
-    <div class="cs-decision">
-      <span class="cs-decision-label">Decision 01 · Onboarding</span>
-      <p class="cs-decision-text">I chose role-based onboarding — users select Restaurant, NGO, or Driver on first launch — rather than a shared universal dashboard.</p>
-      <p class="cs-decision-rationale">
-        The information architecture for each user type is completely different. A restaurant needs to post and monitor. An NGO needs to browse, claim, and coordinate. A driver needs a task list and map. Combining them into one dashboard created visual noise that slowed all three users down in early testing. Separating them at onboarding meant each user only ever sees what's relevant to their role — and switching is possible if needed (some NGO workers also volunteer as drivers).
-      </p>
-    </div>
-
-    <div class="cs-decision">
-      <span class="cs-decision-label">Decision 02 · Verification</span>
-      <p class="cs-decision-text">I chose QR code scanning at both the pickup and delivery points, rather than a simple "mark as collected" button.</p>
-      <p class="cs-decision-rationale">
-        Research showed that food handoffs were failing silently: drivers would mark food as collected, but the restaurant and NGO weren't informed in real time and couldn't verify the handoff had actually happened. A simple button could be tapped without the driver being on-site. QR scanning creates an unambiguous verification moment — the driver must physically be at the location with the restaurant's code. This reduced failed handoffs and gave all three parties confidence in the status.
-      </p>
-    </div>
-
-    <div class="cs-decision">
-      <span class="cs-decision-label">Decision 03 · Information hierarchy</span>
-      <p class="cs-decision-text">I made time remaining the dominant piece of information on every food listing — larger and more prominent than food type or quantity.</p>
-      <p class="cs-decision-rationale">
-        A food listing expiring in 45 minutes triggers completely different behaviour than one expiring in 3 hours. For restaurants, it changes whether they wait or post urgently. For NGOs, it changes whether they dispatch a driver now or plan for later. For drivers, it changes route priority. After testing several hierarchy arrangements, time-first reduced misclicks on expired listings and reduced the number of cases where drivers were assigned to food that was no longer available.
-      </p>
-    </div>
-
-    <div class="cs-decision">
-      <span class="cs-decision-label">Decision 04 · Driver navigation</span>
-      <p class="cs-decision-text">I chose a persistent bottom navigation bar for the driver interface rather than a hamburger menu or sidebar.</p>
-      <p class="cs-decision-rationale">
-        Drivers use the app while on the move — sometimes on a scooter, often with one hand. A hamburger menu requires two deliberate taps to switch between the map, task list, and delivery confirmation screen. A bottom nav keeps all three primary actions within thumb reach at all times. Accessibility and single-hand usability were not secondary considerations here — they were the entire brief for the driver role.
-      </p>
+    <p class="section-label">04 / Selected Screens</p>
+    <h2>Figma Screens</h2>
+    <div class="gallery">
+      <img src="minglemeal_1.png" alt="MingleMeal - restaurant donation screen" />
+      <img src="minglemeal_2.png" alt="MingleMeal - driver pickup brief" />
+      <img src="minglemeal_3.png" alt="MingleMeal - QR verification flow" />
+      <img src="minglemeal_4.png" alt="MingleMeal - NGO live status dashboard" />
+      <img src="minglemeal_5.png" alt="MingleMeal - delivery confirmation" />
+      <img src="minglemeal_6.png" alt="MingleMeal - notifications and updates" />
     </div>
   </section>
 
-  <!-- 07 WIREFRAMES -->
-  <section class="section reveal">
-    <span class="section-label">07 / High-Fidelity Wireframes</span>
-    <h2>Key screens from the build</h2>
-    <p class="section-subheading">
-      These wireframes represent the primary flows for each user type. Each screen is the result of a specific research finding or design decision above — not aesthetic preference. The full process documentation including early sketches, iteration history, and all user flows is on Behance.
-    </p>
-
-    <div class="gallery-annotated">
-      <div class="gallery-item">
-        <img src="minglemeal_1.png" alt="MingleMeal — Restaurant: post food listing" />
-        <div class="gallery-item-caption">Restaurant posts surplus food with time window and quantity</div>
-      </div>
-      <div class="gallery-item">
-        <img src="minglemeal_2.png" alt="MingleMeal — NGO: browse available listings" />
-        <div class="gallery-item-caption">NGO browses available listings — time remaining is the dominant visual element</div>
-      </div>
-      <div class="gallery-item">
-        <img src="minglemeal_3.png" alt="MingleMeal — Driver: task list and map" />
-        <div class="gallery-item-caption">Driver's task view — clear routing with bottom-nav for single-hand use</div>
-      </div>
-      <div class="gallery-item">
-        <img src="minglemeal_4.png" alt="MingleMeal — QR code pickup verification" />
-        <div class="gallery-item-caption">QR scan at pickup — unambiguous handoff verification for restaurant and driver</div>
-      </div>
-      <div class="gallery-item">
-        <img src="minglemeal_5.png" alt="MingleMeal — Delivery confirmation screen" />
-        <div class="gallery-item-caption">Delivery confirmation — NGO receives and closes the loop</div>
-      </div>
-      <div class="gallery-item">
-        <img src="minglemeal_6.png" alt="MingleMeal — Status tracking across roles" />
-        <div class="gallery-item-caption">Live status visible to all three roles simultaneously</div>
-      </div>
+  <!-- Footer nav -->
+  <div class="cs-footer reveal">
+    <div>
+      <div class="cs-footer-label">Next Case Study</div>
+      <div class="cs-footer-title">Avptivo &rarr;</div>
     </div>
-  </section>
-
-  <!-- 08 OUTCOMES -->
-  <section class="section reveal">
-    <span class="section-label">08 / What Success Looks Like</span>
-    <h2>Measuring what matters</h2>
-    <p class="section-intro">
-      MingleMeal is a concept project, but the research is grounded in real user needs. If this were shipped, here's how I'd measure whether it was working:
-    </p>
-
-    <div class="cs-outcomes">
-      <div class="cs-outcome">
-        <div class="cs-outcome-val">&gt;90%</div>
-        <span class="cs-outcome-label">Pickup confirmation rate</span>
-        <div class="cs-outcome-desc">Percentage of food listings that result in a confirmed, QR-verified pickup. The baseline from research: many donations currently go uncollected due to coordination failure.</div>
-      </div>
-      <div class="cs-outcome">
-        <div class="cs-outcome-val">↓ Claim time</div>
-        <span class="cs-outcome-label">Time-to-claim</span>
-        <div class="cs-outcome-desc">How quickly an NGO claims a food listing after it's posted. Faster claiming means more food gets collected before the pickup window closes.</div>
-      </div>
-      <div class="cs-outcome">
-        <div class="cs-outcome-val">0 silent fails</div>
-        <span class="cs-outcome-label">Handoff accuracy</span>
-        <div class="cs-outcome-desc">Number of cases where a driver is assigned to food that is no longer available. QR verification and real-time status should reduce this to zero.</div>
-      </div>
-    </div>
-
-    <div class="cs-insight" style="margin-top: 28px;">
-      <span class="cs-insight-label">What I learned from this</span>
-      <p class="cs-insight-text">
-        MingleMeal taught me that multi-sided platform design requires you to do research with all stakeholders before you design for any of them. The decisions I made that had the most impact — QR verification, time-first hierarchy, role-based onboarding — all came directly from research, not instinct. Without the interviews, I would have built a cleaner-looking app that failed at every real-world handoff.
-      </p>
-    </div>
-
-    <div class="cs-behance-note">
-      Full process documentation including early sketches, affinity mapping, and complete user flows is on Behance. <a href="https://www.behance.net/gallery/241672603/MingleMeal" target="_blank" rel="noopener noreferrer">View on Behance →</a>
-    </div>
-  </section>
+    <a class="btn-primary" href="avptivo.html">View Avptivo</a>
+  </div>
 
 </main>
 
-<footer class="container">
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="craft.html">About Me</a>
-    <a href="journey.html">Journey</a>
-    <a href="connect.html">Connect</a>
-    <a href="water-behaviour.html">← Previous Case Study</a>
-  </div>
-</footer>
-
 <script>
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("visible");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".topbar-nav a").forEach((link) => {
+    if (link.getAttribute("href") === currentPage) link.classList.add("active");
+  });
 </script>
+
 </body>
 </html>
