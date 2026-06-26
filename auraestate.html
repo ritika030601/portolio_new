@@ -25,12 +25,11 @@
     <p class="kicker">Dual-Mode Real Estate</p>
     <h1><span class="case-study-number">04.</span> Aura Estate</h1>
     <p>
-      Aura Estate is a premium platform built to serve two very different users - investors looking at returns and
-      buyers looking for a home - through a shared entry point that quickly splits into two tailored experiences.
+      Aura Estate is a refined mobile real estate platform built around a hard constraint: investors and first-time
+      buyers are looking at the same listings for completely different reasons, and forcing them through one generic
+      flow serves neither well. This case study covers the research behind that split, and the structural choices
+      that came out of it.
     </p>
-    <a class="btn-primary" href="https://www.behance.net/gallery/247977753/Aura-estate" target="_blank" rel="noopener noreferrer">
-      View Full Case Study on Behance
-    </a>
   </section>
 
   <!-- Stats -->
@@ -40,12 +39,12 @@
       <div class="stat-label">Distinct Personas</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-val">12+</div>
-      <div class="stat-label">User Interviews</div>
+      <div class="stat-val">2</div>
+      <div class="stat-label">Competitors Benchmarked</div>
     </div>
     <div class="stat-cell">
       <div class="stat-val">1</div>
-      <div class="stat-label">Shared Entry Point</div>
+      <div class="stat-label">Shared Onboarding</div>
     </div>
     <div class="stat-cell">
       <div class="stat-val">Hi-Fi</div>
@@ -60,22 +59,22 @@
       <div class="section-text">
         <h2>When one flow serves no one well</h2>
         <p>
-          Real estate platforms typically build a single experience and ask both investors and buyers to navigate it.
-          The problem is that these two groups want entirely different things. Investors care about yield, market data,
-          and portfolio views. Buyers care about location, space, lifestyle fit, and trust signals. Giving them the same
-          interface means both groups spend time filtering out what does not apply to them.
+          Aura Estate is a refined mobile real estate platform that simplifies property discovery through two
+          tailored user journeys. It balances investor-focused financial insight with an aspirational,
+          lifestyle-driven experience for first-time buyers - designed with a warm, minimalist palette of deep oak,
+          sand, and cream linen as a deliberate alternative to cluttered, traditional real estate interfaces.
         </p>
       </div>
       <div class="section-text">
         <p>
-          The research confirmed what common sense suggests: both user types drop off early when the platform does not
-          immediately reflect their intent. The question was whether one app could serve both - or whether it needed to
-          be two apps with a shared front door.
+          Benchmarking Aura Estate against MagicBricks and NoBroker made the gap clear: both competitors default to
+          a "one size fits all" interface. Neither gives investors real ROI tooling, and neither gives first-time
+          buyers a guided, low-friction path - cognitive load on both platforms came out "extremely high" to "moderate"
+          at best.
         </p>
         <p>
-          The answer turned out to be neither extreme. A single entry point with a clear, low-friction mode selection
-          could set the right context immediately, and the rest of the experience could branch from there without
-          feeling disconnected.
+          The question wasn't whether to build two apps or one app - it was whether a single shared entry point could
+          set the right context immediately, then branch into two genuinely different experiences without feeling disjointed.
         </p>
       </div>
     </div>
@@ -84,34 +83,256 @@
   <!-- 02 / Research -->
   <section class="section reveal">
     <p class="section-label">02 / Research</p>
-    <h2>Two personas, two completely different journeys</h2>
+    <h2>Two personas, two completely different jobs to be done</h2>
     <p class="section-intro">
-      Research centred on dual-persona interviews and comparative journey mapping to understand where the experience
-      broke down for each group - and what they needed to feel confident moving forward.
+      Research centred on building out two full personas through an affinity diagram - clustering needs into
+      Financial Performance, Portfolio Management, and Market Intelligence for investors, versus Lifestyle Discovery,
+      Emotional Connection, and Educational Guidance for first-time buyers - then validating each against a real bio
+      and a clear set of pain points.
     </p>
-    <div class="points">
-      <div class="point"><strong>Investors</strong> wanted data-first. They needed yield estimates, price history, and neighbourhood comparisons front and centre. Lifestyle photography felt like noise to them.</div>
-      <div class="point"><strong>Buyers</strong> wanted to feel something. They responded to visual storytelling, neighbourhood character, and clear information about the buying process - not raw numbers.</div>
-      <div class="point">Both groups shared one expectation: the platform had to earn their trust quickly. High-intent journeys - whether financial or personal - require confidence before commitment.</div>
+    <div class="persona-grid">
+      <div class="persona-card">
+        <div class="persona-card-name">Marcus Sterling</div>
+        <div class="persona-card-role">35 &middot; Senior Portfolio Manager</div>
+        <p class="persona-card-bio">
+          A seasoned real estate professional managing high-value assets. He prioritises market data, financial
+          forecasting, and operational efficiency over lifestyle aesthetics.
+        </p>
+        <div class="persona-subgrid">
+          <div>
+            <p class="persona-sublabel">Pain Points</p>
+            <ul class="persona-sublist">
+              <li>Analysis paralysis</li>
+              <li>Data lag</li>
+              <li>Administrative friction</li>
+            </ul>
+          </div>
+          <div>
+            <p class="persona-sublabel">Needs</p>
+            <ul class="persona-sublist">
+              <li>Predictive insights</li>
+              <li>Real-time returns</li>
+              <li>Secure document storage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-card-name">Maya Stephen</div>
+        <div class="persona-card-role">28 &middot; Creative Lead / Designer</div>
+        <p class="persona-card-bio">
+          A young professional transitioning from renting to owning. She wants an emotional connection to a space,
+          but is intimidated by the complex financial and legal steps involved.
+        </p>
+        <div class="persona-subgrid">
+          <div>
+            <p class="persona-sublabel">Pain Points</p>
+            <ul class="persona-sublist">
+              <li>Goal uncertainty</li>
+              <li>Poor discoverability</li>
+              <li>Buyer confusion</li>
+            </ul>
+          </div>
+          <div>
+            <p class="persona-sublabel">Needs</p>
+            <ul class="persona-sublist">
+              <li>Clean cost breakdowns</li>
+              <li>Lifestyle-based search</li>
+              <li>A guided journey</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="insight-callout">
+      <span class="insight-label">The insight</span>
+      Both personas needed the platform to earn their trust fast - Marcus through verifiable numbers, Maya through
+      clarity and reassurance. The trust mechanism had to be different for each, even though the underlying need was the same.
     </div>
   </section>
 
-  <!-- 03 / Solution -->
+  <!-- 03 / IA -->
   <section class="section reveal">
-    <p class="section-label">03 / Solution</p>
-    <h2>One door, two experiences</h2>
-    <div class="points">
-      <div class="point">A simple, prominent mode toggle at entry - Investor or Buyer - sets the context for everything that follows. No long onboarding, no questionnaire. One choice, instantly applied.</div>
-      <div class="point">Investor mode surfaces market analytics, projected returns, and portfolio tools as the primary content. Property photos move to secondary position.</div>
-      <div class="point">Buyer mode leads with photography, neighbourhood stories, and lifestyle context. Financial data is available but not pushed. The emotional side of the decision is respected.</div>
-      <div class="point">The brand stays consistent across both modes - same colours, same typography, same trust signals - so switching feels like a preference, not a different product.</div>
+    <p class="section-label">03 / Information Architecture</p>
+    <h2>One door, two structures</h2>
+    <p class="section-intro">
+      Both modes share a single onboarding and persona toggle, then branch into completely independent navigation -
+      five sections each, built around what that persona actually needs to see first.
+    </p>
+    <div class="ia-tree">
+      <div class="ia-root">
+        <div class="ia-root-node">Common Onboarding - Persona Toggle</div>
+      </div>
+
+      <p class="ia-branch-label">Investor Mode</p>
+      <div class="ia-row">
+        <div class="ia-node">
+          <div class="ia-node-title">Dashboard</div>
+          <div class="ia-node-sub">Total assets & annual yield</div>
+        </div>
+        <div class="ia-node">
+          <div class="ia-node-title">Insights</div>
+          <div class="ia-node-sub">Cap rates & micro-market filters</div>
+        </div>
+        <div class="ia-node">
+          <div class="ia-node-title">Market</div>
+          <div class="ia-node-sub">12-month forecast graph</div>
+        </div>
+        <div class="ia-node">
+          <div class="ia-node-title">Value</div>
+          <div class="ia-node-sub">Net operating income calculator</div>
+        </div>
+      </div>
+
+      <p class="ia-branch-label">Buyer Mode</p>
+      <div class="ia-row">
+        <div class="ia-node">
+          <div class="ia-node-title">Dashboard</div>
+          <div class="ia-node-sub">Sanctuary search & vibe tags</div>
+        </div>
+        <div class="ia-node">
+          <div class="ia-node-title">Favourites</div>
+          <div class="ia-node-sub">Masonry grid view</div>
+        </div>
+        <div class="ia-node">
+          <div class="ia-node-title">Guide</div>
+          <div class="ia-node-sub">Step-by-step move-in journey</div>
+        </div>
+        <div class="ia-node">
+          <div class="ia-node-title">Inbox</div>
+          <div class="ia-node-sub">Agent chat threads</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 04 / Screens -->
+  <!-- 04 / Journey -->
   <section class="section reveal">
-    <p class="section-label">04 / Selected Screens</p>
-    <h2>Selected Screens</h2>
+    <p class="section-label">04 / Journey Map</p>
+    <h2>Two journeys, side by side</h2>
+    <p class="section-intro">
+      Mapping both personas through the same four stages - Discovery, Search, Evaluation, Action - made the divergence
+      concrete, and gave each feature in the IA above a specific moment it needed to exist for.
+    </p>
+    <table class="journey-table">
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>Discovery</th>
+          <th>Search</th>
+          <th>Evaluation</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="journey-persona-row"><td colspan="5">Marcus &middot; Investor</td></tr>
+        <tr>
+          <td>Goal</td>
+          <td>Find high-yield assets to grow his portfolio</td>
+          <td>Filter by data, not by photos</td>
+          <td>Verify ROI and legal docs in the vault</td>
+          <td>Place a high-stakes offer faster</td>
+        </tr>
+        <tr>
+          <td>Emotion</td>
+          <td><span class="journey-emotion">Calculating</span></td>
+          <td><span class="journey-emotion">Focused</span></td>
+          <td><span class="journey-emotion">Cautious</span></td>
+          <td><span class="journey-emotion">Decisive</span></td>
+        </tr>
+        <tr>
+          <td>Aura feature</td>
+          <td>Investor mode toggle</td>
+          <td>ROI stats & KPI filters</td>
+          <td>Digital document vault</td>
+          <td>One-tap priority offer</td>
+        </tr>
+        <tr class="journey-persona-row"><td colspan="5">Maya &middot; First-Time Buyer</td></tr>
+        <tr>
+          <td>Goal</td>
+          <td>Find a "sanctuary" to start her own life</td>
+          <td>Browse by lifestyle, not specs</td>
+          <td>Understand monthly costs and next steps</td>
+          <td>Connect to an agent with confidence</td>
+        </tr>
+        <tr>
+          <td>Emotion</td>
+          <td><span class="journey-emotion">Excited</span></td>
+          <td><span class="journey-emotion">Overwhelmed</span></td>
+          <td><span class="journey-emotion">Relieved</span></td>
+          <td><span class="journey-emotion">Empowered</span></td>
+        </tr>
+        <tr>
+          <td>Aura feature</td>
+          <td>Lifestyle "vibe" tags</td>
+          <td>Sanctuary-first UI</td>
+          <td>Monthly affordability guide</td>
+          <td>Guided agent chat</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 05 / Wireframes -->
+  <section class="section reveal">
+    <p class="section-label">05 / Wireframes &rarr; Hi-Fi</p>
+    <h2>From rough boxes to the final flow</h2>
+    <p class="section-intro">
+      Both modes were wireframed independently before any colour or imagery was added, to make sure the structural
+      decisions held up before the "warm minimalist" visual language was layered on top.
+    </p>
+    <div class="progression-grid">
+      <div class="progression-col">
+        <p class="progression-col-label">Low-Fi Wireframe</p>
+        <img src="auraestate_wireframe_1.png" alt="Aura Estate low-fidelity wireframe sheet" />
+      </div>
+      <div class="progression-col">
+        <p class="progression-col-label">Final Hi-Fi Screen</p>
+        <img src="auraestate_2.png" alt="Aura Estate investor dashboard, final" />
+      </div>
+    </div>
+    <div class="progression-note">
+      <strong>What changed and why:</strong> the early investor wireframes led with a property photo at the top of
+      the dashboard, matching the buyer layout. In testing, this read as noise to the investor persona - so the hi-fi
+      version moved photography to a secondary position and pushed yield, NOI, and portfolio performance to the top
+      of the screen instead.
+    </div>
+  </section>
+
+  <!-- 06 / Design Decisions -->
+  <section class="section reveal">
+    <p class="section-label">06 / Design Decisions</p>
+    <h2>Why each key screen looks the way it does</h2>
+    <div class="decision-card">
+      <img src="auraestate_1.png" alt="Aura Estate entry mode selection screen" />
+      <div class="decision-text">
+        <div class="decision-label">Entry / Mode Selection</div>
+        <p>I chose a single, prominent two-option toggle at entry instead of a multi-step questionnaire, because both
+        personas dropped off in benchmarked competitors when onboarding felt like a form rather than a single decision.</p>
+      </div>
+    </div>
+    <div class="decision-card">
+      <img src="auraestate_2.png" alt="Aura Estate investor dashboard screen" />
+      <div class="decision-text">
+        <div class="decision-label">Investor Dashboard</div>
+        <p>I surfaced market analytics and projected returns as the primary content instead of property photography,
+        because Marcus's research explicitly ranked lifestyle imagery as noise that got in the way of his decision.</p>
+      </div>
+    </div>
+    <div class="decision-card">
+      <img src="auraestate_3.png" alt="Aura Estate buyer property view screen" />
+      <div class="decision-text">
+        <div class="decision-label">Buyer Property View</div>
+        <p>I led the buyer view with photography and neighbourhood story content, with financial data present but not
+        pushed forward, because Maya needed an emotional read on a space before she was ready to engage with numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 / Screens -->
+  <section class="section reveal">
+    <p class="section-label">07 / Selected Screens</p>
+    <h2>Figma Screens</h2>
     <div class="gallery">
       <img src="auraestate_1.png" alt="Aura Estate - entry mode selection" />
       <img src="auraestate_2.png" alt="Aura Estate - investor dashboard" />
@@ -119,6 +340,21 @@
       <img src="auraestate_4.png" alt="Aura Estate - market analytics" />
       <img src="auraestate_5.png" alt="Aura Estate - neighbourhood story" />
       <img src="auraestate_6.png" alt="Aura Estate - trust and contact flow" />
+    </div>
+  </section>
+
+  <!-- 08 / Outcomes -->
+  <section class="section reveal">
+    <p class="section-label">08 / Outcomes</p>
+    <h2>What I'd measure if this shipped</h2>
+    <div class="points">
+      <div class="point">For Investor mode, the first metric I'd track is <strong>time-to-first-vault-document-upload</strong> -
+      a proxy for whether Marcus actually trusts the platform enough to move his real paperwork into it.</div>
+      <div class="point">For Buyer mode, I'd track <strong>completion rate of the guided move-in journey</strong> -
+      whether Maya makes it from "saved a favourite" through to "contacted an agent" without abandoning midway, which
+      is exactly where the research showed buyer confusion peaked.</div>
+      <div class="point">Across both modes, <strong>mode-switch rate</strong> would tell me whether the shared brand and
+      entry point are actually working - ideally, switching feels like a preference, not a different product.</div>
     </div>
   </section>
 

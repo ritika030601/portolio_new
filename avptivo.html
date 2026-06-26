@@ -25,89 +25,291 @@
     <p class="kicker">Fitness and Habit UX</p>
     <h1><span class="case-study-number">03.</span> Avptivo</h1>
     <p>
-      Avptivo is a wellness ecosystem designed to strengthen workout consistency, nutrition clarity, and long-term habit
-      retention - by connecting all three into one daily loop instead of three separate experiences.
+      Avptivo is a fitness app designed around one belief: people don't quit workouts because they lack motivation,
+      they quit because the app gives them too much to decide and too little structure to lean on. This case study
+      walks through the research, the structural decisions, and the reasoning behind the screens - not just the screens.
     </p>
-    <a class="btn-primary" href="https://www.behance.net/gallery/247810553/Avptivo" target="_blank" rel="noopener noreferrer">
-      View Full Case Study on Behance
-    </a>
   </section>
 
   <!-- Stats -->
   <div class="stats-row reveal">
     <div class="stat-cell">
-      <div class="stat-val">15+</div>
+      <div class="stat-val">4 wks</div>
+      <div class="stat-label">End to End</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-val">4</div>
       <div class="stat-label">User Interviews</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-val">3</div>
-      <div class="stat-label">Core Habit Loops</div>
+      <div class="stat-val">82.5</div>
+      <div class="stat-label">SUS Score (Grade A)</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-val">1</div>
-      <div class="stat-label">Unified Flow</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-val">Hi-Fi</div>
-      <div class="stat-label">Prototype</div>
+      <div class="stat-val">94%</div>
+      <div class="stat-label">Task Success Rate</div>
     </div>
   </div>
 
-  <!-- 01 / Context -->
+  <!-- 01 / Process -->
   <section class="section reveal">
-    <p class="section-label">01 / Context</p>
+    <p class="section-label">01 / Process</p>
+    <h2>How the project actually moved</h2>
+    <p class="section-intro">
+      Four weeks, three phases, in Figma. I didn't jump to screens - the first two weeks were spent entirely on
+      understanding the problem and the people who have it, before a single wireframe existed.
+    </p>
+    <div class="process-strip">
+      <div class="process-step">
+        <div class="process-step-num">01</div>
+        <div class="process-step-title">Research</div>
+        <ul class="process-step-list">
+          <li>Problem identification</li>
+          <li>Competitive benchmarking</li>
+          <li>User personas & maps</li>
+          <li>Empathy maps</li>
+        </ul>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">02</div>
+        <div class="process-step-title">Strategy</div>
+        <ul class="process-step-list">
+          <li>How Might We statements</li>
+          <li>Feature list</li>
+          <li>Product map</li>
+          <li>User journey + usability testing</li>
+        </ul>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">03</div>
+        <div class="process-step-title">UI Design</div>
+        <ul class="process-step-list">
+          <li>Wireframe designing</li>
+          <li>Design system</li>
+          <li>UI assets & components</li>
+          <li>Mobile interface</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 / Context -->
+  <section class="section reveal">
+    <p class="section-label">02 / Context</p>
     <div class="section-two-col">
       <div class="section-text">
         <h2>Why people stop showing up</h2>
         <p>
-          Most fitness apps are actually three separate apps stitched together - a workout tracker, a meal logger, and
-          a progress dashboard. Users switch between them, lose context, and eventually stop using all of them. The
-          experience is fragmented by design, even when the intention is not.
+          Most fitness apps are actually three separate apps stitched together - a workout tracker, a meal logger,
+          and a progress dashboard. Users switch between them, lose context, and eventually stop using all of them.
         </p>
       </div>
       <div class="section-text">
         <p>
-          Avptivo started from one question: what if the app knew what you did today, adjusted your meal suggestion
-          accordingly, and showed you one clear next step - without you having to piece it together yourself? That is the
-          experience this project set out to build.
+          Five specific problems came out of early research and shaped everything that followed: a lack of a
+          "central hub" left users disorganised about their health goals; fixed workout durations ignored that most
+          people only have 15-20 free minutes; charts and graphs were too technical for the average user to read at a
+          glance; users felt isolated without any social or accountability layer; and vegetarian or vegan users
+          specifically lacked diverse, high-protein meal plans.
         </p>
         <p>
-          The research made clear that habit formation breaks down not from lack of motivation, but from unclear next
-          steps. People drop off at the moment when the app asks them to make a decision instead of making it for them.
+          None of these are UI problems. They're structural ones - which is why the response couldn't just be "nicer
+          screens."
         </p>
       </div>
     </div>
   </section>
 
-  <!-- 02 / Research -->
+  <!-- 03 / Research -->
   <section class="section reveal">
-    <p class="section-label">02 / Research</p>
+    <p class="section-label">03 / Research</p>
     <h2>What users actually said</h2>
     <p class="section-intro">
-      Research was grounded in habit psychology and real user behaviour around exercise, nutrition, and daily routine.
-      I interviewed 15 people across different fitness levels and tracked where they dropped off in existing apps.
+      I interviewed four people across different fitness contexts - a college student, a working professional, a
+      "fit customizer" focused on diet, and a working student - and mapped each through empathy maps before forming
+      any opinion on the solution.
+    </p>
+    <div class="quote-grid">
+      <div class="quote-card">
+        <div class="quote-role">College Student &middot; Biggest mental hurdle</div>
+        <blockquote>"I want a feature to overcome the initial dread - something like guided warm-ups or beginner challenges to ease into workouts."</blockquote>
+      </div>
+      <div class="quote-card">
+        <div class="quote-role">Working Professional &middot; Support needed when drained</div>
+        <blockquote>"I need a flexible workout schedule that adapts to an unpredictable routine, and motivational nudges when I'm feeling drained."</blockquote>
+      </div>
+      <div class="quote-card">
+        <div class="quote-role">Fit Customizer &middot; Essential customization</div>
+        <blockquote>"I require extensive dietary customization within the app - specifically robust options for vegetarian meal planning."</blockquote>
+      </div>
+      <div class="quote-card">
+        <div class="quote-role">Working Student &middot; Ideal tracking system</div>
+        <blockquote>"I want a simplified, time-saving tracking system with minimal manual input for food logging."</blockquote>
+      </div>
+    </div>
+    <div class="insight-callout">
+      <span class="insight-label">The insight</span>
+      All four had different lives, but the same underlying ask: remove the decision-making, not just the friction.
+      Nobody asked for more features - they asked for fewer choices to make at the moment they were already tired.
+    </div>
+  </section>
+
+  <!-- 04 / Strategy -->
+  <section class="section reveal">
+    <p class="section-label">04 / Strategy</p>
+    <h2>Reframing the problem before designing the answer</h2>
+    <p class="section-intro">
+      Benchmarking against NTC, Cult, Fitbit, and Strava showed that most competitors compete on feature count -
+      gamified challenges, social feeds, wearable sync - but none of them solved the actual drop-off moment: deciding
+      what to do next. That gap became the brief.
     </p>
     <div class="points">
-      <div class="point">Users skipped workouts most often not because they lacked time, but because the decision of what to do next felt too open-ended. They wanted to be told, not asked.</div>
-      <div class="point">Nutrition logging was the first thing to go when motivation dipped. People found it tedious and disconnected from the workout experience - it felt like admin, not part of their routine.</div>
-      <div class="point">Progress tracking was motivating only when visible in context. A streak or badge buried in a separate tab did nothing. Progress shown right after completing a session - did a lot.</div>
+      <div class="point"><strong>How Might We</strong> turn complex biometrics into a simple, intuitive 360&deg; body visual?</div>
+      <div class="point"><strong>How Might We</strong> create micro-workouts that keep users consistent even with just 15 minutes?</div>
+      <div class="point"><strong>How Might We</strong> use AI to auto-log nutrition from a single photo or quick description?</div>
+      <div class="point"><strong>How Might We</strong> build a frictionless daily Metric Hub that encourages effortless progress tracking?</div>
     </div>
   </section>
 
-  <!-- 03 / Solution -->
+  <!-- 05 / IA -->
   <section class="section reveal">
-    <p class="section-label">03 / Solution</p>
-    <h2>A daily loop, not three separate apps</h2>
-    <div class="points">
-      <div class="point">The home screen always shows one clear action: the next thing in the user's daily loop. Not a menu of choices - just the next step.</div>
-      <div class="point">Meal suggestions are generated after workout completion, based on what the user just did. This ties nutrition to effort in a way that feels relevant, not random.</div>
-      <div class="point">Progress feedback appears inline - immediately after each completed session. Streaks, weekly totals, and body markers are visible without navigating away.</div>
+    <p class="section-label">05 / Information Architecture</p>
+    <h2>One product map, four root sections</h2>
+    <p class="section-intro">
+      Before any screen was drawn, the whole app was structured as a flat, four-branch map. This is what separates
+      a UI decision from a UX one - every screen that came later had to justify its place inside this structure.
+    </p>
+    <div class="ia-tree">
+      <div class="ia-root">
+        <div class="ia-root-node">Avptivo</div>
+      </div>
+      <div class="ia-row">
+        <div class="ia-node">
+          <div class="ia-node-title">Home</div>
+          <div class="ia-node-sub">Daily dashboard, progress snapshots, recommendations, daily nudge, metric quick-view</div>
+        </div>
+        <div class="ia-node">
+          <div class="ia-node-title">Track</div>
+          <div class="ia-node-sub">Calorie tracker, workout progress, latest workouts, macro logs</div>
+        </div>
+        <div class="ia-node">
+          <div class="ia-node-title">Plan</div>
+          <div class="ia-node-sub">Daily planner, core program, discovery feed, customization, content library</div>
+        </div>
+        <div class="ia-node">
+          <div class="ia-node-title">Profile</div>
+          <div class="ia-node-sub">Personal branding, social & growth, physical metrics, fitness goals, system settings</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 04 / Screens -->
+  <!-- 06 / Journey -->
   <section class="section reveal">
-    <p class="section-label">04 / Selected Screens</p>
+    <p class="section-label">06 / User Journey</p>
+    <h2>Mapping the four stages of habit drop-off</h2>
+    <p class="section-intro">
+      Mapping the journey from first open to long-term retention surfaced where motivation actually fails - and it
+      isn't where most fitness apps focus their effort.
+    </p>
+    <table class="journey-table">
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>What the user does</th>
+          <th>Feeling</th>
+          <th>Where Avptivo had to improve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Onboarding & Setup</strong></td>
+          <td>Signs up, enters goals, connects devices</td>
+          <td><span class="journey-emotion">Excited</span></td>
+          <td>Easy setup, clear privacy</td>
+        </tr>
+        <tr>
+          <td><strong>Activity & Workout Selection</strong></td>
+          <td>Browses fitness or diet content</td>
+          <td><span class="journey-emotion">Excited &rarr; Indecisive</span></td>
+          <td>AI recommendations, less hunting</td>
+        </tr>
+        <tr>
+          <td><strong>Tracking & Execution</strong></td>
+          <td>Picks workout, tracks routine</td>
+          <td><span class="journey-emotion">Motivated &rarr; Frustrated</span></td>
+          <td>Video demos, real-time feedback, less manual input</td>
+        </tr>
+        <tr>
+          <td><strong>Retention & Community</strong></td>
+          <td>Views progress, joins challenges</td>
+          <td><span class="journey-emotion">Unmotivated &rarr; Happy</span></td>
+          <td>Mindful nudges, rewards, social challenges</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 07 / Wireframes -->
+  <section class="section reveal">
+    <p class="section-label">07 / Wireframes &rarr; Hi-Fi</p>
+    <h2>From rough boxes to the final flow</h2>
+    <p class="section-intro">
+      Every screen went through a low-fidelity pass first - laid out purely for structure and hierarchy, with no
+      visual design decisions made yet. The hi-fi screens only followed once the structure held up on its own.
+    </p>
+    <div class="progression-grid">
+      <div class="progression-col">
+        <p class="progression-col-label">Low-Fi Wireframe</p>
+        <img src="avptivo_wireframe_1.png" alt="Avptivo low-fidelity wireframe sheet" />
+      </div>
+      <div class="progression-col">
+        <p class="progression-col-label">Final Hi-Fi Screen</p>
+        <img src="avptivo_1.png" alt="Avptivo home daily loop screen, final" />
+      </div>
+    </div>
+    <div class="progression-note">
+      <strong>What changed and why:</strong> the wireframe pass started with a tab-style metrics list on Home.
+      Testing made it clear users skimmed past blocks of numbers, so the hi-fi version replaced them with a single
+      "next action" card and pushed detailed metrics one tap away into Track - reflecting the IA decision above,
+      not just a visual refresh.
+    </div>
+  </section>
+
+  <!-- 08 / Design Decisions -->
+  <section class="section reveal">
+    <p class="section-label">08 / Design Decisions</p>
+    <h2>Why each key screen looks the way it does</h2>
+    <div class="decision-card">
+      <img src="avptivo_1.png" alt="Avptivo home screen" />
+      <div class="decision-text">
+        <div class="decision-label">Home Screen</div>
+        <p>I designed the home screen to always surface one clear next action instead of a menu of options - because
+        research showed users dropped off most often when the app asked them to decide what to do, not when it told them.</p>
+      </div>
+    </div>
+    <div class="decision-card">
+      <img src="avptivo_3.png" alt="Avptivo post-workout meal suggestion screen" />
+      <div class="decision-text">
+        <div class="decision-label">Post-Workout Meal Suggestion</div>
+        <p>I tied meal suggestions to the workout just completed instead of a generic daily plan, because the Fit
+        Customizer persona specifically needed nutrition to feel connected to effort, not like a separate admin task.</p>
+      </div>
+    </div>
+    <div class="decision-card">
+      <img src="avptivo_4.png" alt="Avptivo progress and streak screen" />
+      <div class="decision-text">
+        <div class="decision-label">Progress & Streak View</div>
+        <p>I placed streaks and weekly totals inline, immediately after a completed session, rather than behind a
+        separate tab - because the research showed progress only motivated users when it was visible in context, right
+        after the action that earned it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 / Screens -->
+  <section class="section reveal">
+    <p class="section-label">09 / Selected Screens</p>
     <h2>Figma Screens</h2>
     <div class="gallery">
       <img src="avptivo_1.png" alt="Avptivo - home daily loop screen" />
@@ -117,6 +319,33 @@
       <img src="avptivo_5.png" alt="Avptivo - nutrition logging" />
       <img src="avptivo_6.png" alt="Avptivo - weekly summary" />
       <img src="avptivo_7.png" alt="Avptivo - onboarding and goal setup" />
+    </div>
+  </section>
+
+  <!-- 10 / Outcomes -->
+  <section class="section reveal">
+    <p class="section-label">10 / Outcomes</p>
+    <h2>What this achieved - and what I'd track next</h2>
+    <p class="section-intro">
+      The prototype was tested with real participants completing core flows, not just reviewed for visual polish.
+    </p>
+    <div class="stats-row" style="margin-bottom: var(--sp-3);">
+      <div class="stat-cell">
+        <div class="stat-val">82.5</div>
+        <div class="stat-label">Avg. SUS Score - Grade A</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val">94%</div>
+        <div class="stat-label">Task Success Rate</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val">12 sec</div>
+        <div class="stat-label">Avg. Time on Task</div>
+      </div>
+    </div>
+    <div class="points">
+      <div class="point">If this shipped, the metric I'd watch first is <strong>7-day workout retention</strong> - whether the daily-loop home screen actually keeps people returning past the first week, which is where most fitness apps lose users.</div>
+      <div class="point">A secondary metric would be <strong>time-to-first-completed-session</strong> from onboarding, to check whether removing decision points at setup actually gets people moving faster.</div>
     </div>
   </section>
 

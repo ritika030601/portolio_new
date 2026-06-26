@@ -505,3 +505,364 @@ img {
   .hero h1 { font-size: var(--fs-lg); }
   .stats-row { grid-template-columns: 1fr 1fr; }
 }
+
+/* ============================================================
+   ADDED FOR DEEP CASE STUDIES (Avptivo / Aura Estate rebuild)
+   Reuses existing variables — no new colors or fonts introduced.
+   ============================================================ */
+
+/* ── Process Strip (Research > Strategy > UI Design) ───────── */
+.process-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+}
+
+.process-step:not(:last-child)::after {
+  content: "\2192";
+  position: absolute;
+  right: -22px;
+  top: 6px;
+  color: var(--accent-lt);
+  font-size: 1.1rem;
+}
+
+.process-step-num {
+  font-family: var(--font-ui);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.process-step-title {
+  font-family: var(--font-ui);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--text);
+  margin: 4px 0 10px;
+}
+
+.process-step-list {
+  list-style: none;
+  font-size: var(--fs-xs);
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+/* ── Quote Cards (real user voice) ──────────────────────────── */
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+
+.quote-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: var(--sp-3);
+  border-left: 3px solid var(--accent);
+}
+
+.quote-card .quote-role {
+  font-family: var(--font-ui);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.quote-card blockquote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--fs-base);
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* ── Insight Callout ─────────────────────────────────────────── */
+.insight-callout {
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+  margin-top: var(--sp-4);
+  font-family: var(--font-ui);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.insight-callout .insight-label {
+  display: block;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+/* ── Persona Cards ───────────────────────────────────────────── */
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+
+.persona-card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+}
+
+.persona-card-name {
+  font-family: var(--font-ui);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.persona-card-role {
+  font-family: var(--font-ui);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--sp-2);
+}
+
+.persona-card-bio {
+  font-size: var(--fs-sm);
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-bottom: var(--sp-3);
+}
+
+.persona-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2);
+}
+
+.persona-sublabel {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+}
+
+.persona-sublist {
+  list-style: none;
+  font-size: var(--fs-xs);
+  color: var(--text-mid);
+  line-height: 1.65;
+}
+
+/* ── IA Tree Diagram ─────────────────────────────────────────── */
+.ia-tree {
+  margin-top: var(--sp-4);
+}
+
+.ia-root {
+  text-align: center;
+  margin-bottom: var(--sp-3);
+}
+
+.ia-root-node {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-ui);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 10px 24px;
+  border-radius: 24px;
+}
+
+.ia-branch-label {
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: var(--sp-3) 0 var(--sp-2);
+}
+
+.ia-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-4);
+}
+
+.ia-node {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-2) var(--sp-2);
+  text-align: center;
+}
+
+.ia-node-title {
+  font-family: var(--font-ui);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.ia-node-sub {
+  font-size: var(--fs-xs);
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+/* ── Wireframe → Hi-Fi Progression ───────────────────────────── */
+.progression-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+
+.progression-col {
+  text-align: center;
+}
+
+.progression-col-label {
+  font-family: var(--font-ui);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: var(--sp-2);
+}
+
+.progression-col img {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.progression-note {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: var(--sp-3);
+  margin-top: var(--sp-3);
+  font-size: var(--fs-sm);
+  color: var(--text-mid);
+  line-height: 1.65;
+}
+
+.progression-note strong {
+  color: var(--accent);
+}
+
+/* ── Decision Cards (1 screen : 1 reasoned choice) ────────────── */
+.decision-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--sp-3);
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: var(--sp-3);
+  margin-bottom: var(--sp-3);
+  align-items: center;
+}
+
+.decision-card img {
+  border-radius: 8px;
+}
+
+.decision-text .decision-label {
+  font-family: var(--font-ui);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.decision-text p {
+  font-size: var(--fs-sm);
+  color: var(--text-mid);
+  line-height: 1.65;
+}
+
+/* ── Journey Map Table (dual persona) ────────────────────────── */
+.journey-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--sp-3);
+  font-size: var(--fs-sm);
+}
+
+.journey-table th {
+  font-family: var(--font-ui);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align: left;
+  padding: var(--sp-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.journey-table td {
+  padding: var(--sp-2);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-mid);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.journey-table .journey-persona-row td {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  color: var(--text);
+  padding-top: var(--sp-3);
+  border-bottom: none;
+}
+
+.journey-emotion {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ── Metrics row (usability test results) reuses .stats-row ──── */
+
+/* ── Responsive additions ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .process-strip { grid-template-columns: 1fr; gap: var(--sp-4); }
+  .process-step:not(:last-child)::after { display: none; }
+  .quote-grid { grid-template-columns: 1fr; }
+  .persona-grid { grid-template-columns: 1fr; }
+  .ia-row { grid-template-columns: repeat(2, 1fr); }
+  .progression-grid { grid-template-columns: 1fr; }
+  .decision-card { grid-template-columns: 1fr; }
+  .journey-table { font-size: var(--fs-xs); }
+  .journey-table th, .journey-table td { padding: 6px; }
+}
