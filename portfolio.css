@@ -170,7 +170,7 @@ nav.scrolled { padding: 14px 48px; }
 .hero-name {
   font-family: var(--body-font);
   font-size: clamp(56px, 7vw, 110px);
-  font-weight: 300; line-height: 0.95;
+  font-weight: 700; line-height: 0.95;
   letter-spacing: -0.02em; margin-bottom: 8px;
   animation: fadeUp 0.9s var(--ease) 0.35s both;
 }
@@ -365,7 +365,8 @@ section { position: relative; z-index: 2; }
   padding: 22px;
   border: 2px solid var(--border);
   border-radius: 12px; background: var(--surface);
-  transition: all 0.3s var(--ease); cursor: pointer;
+  transition: border-color 450ms ease-out, transform 450ms ease-out, box-shadow 450ms ease-out, background 450ms ease-out;
+  cursor: pointer;
 }
 .stack-item:hover {
   border-color: rgba(175,127,52,0.45);
@@ -395,7 +396,7 @@ section { position: relative; z-index: 2; }
   padding: 22px;
   border: 2px solid var(--border);
   border-radius: 12px; background: var(--surface);
-  transition: all 0.3s var(--ease);
+  transition: border-color 450ms ease-out, transform 450ms ease-out, box-shadow 450ms ease-out, background 450ms ease-out;
 }
 .recognition-item:hover {
   border-color: rgba(175,127,52,0.45);
@@ -408,7 +409,7 @@ section { position: relative; z-index: 2; }
   border: 2px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
-  transition: all 0.3s var(--ease);
+  transition: border-color 450ms ease-out, transform 450ms ease-out, box-shadow 450ms ease-out, background 450ms ease-out;
 }
 .cred-item:hover {
   border-color: rgba(175,127,52,0.45);
@@ -435,7 +436,7 @@ section { position: relative; z-index: 2; }
   border-radius: 12px;
   overflow: hidden;
   background: var(--surface);
-  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
+  transition: border-color 450ms ease-out, transform 450ms ease-out, box-shadow 450ms ease-out, background 450ms ease-out;
   position: relative;
   /* column: body first, then image strip below */
   display: flex;
@@ -536,7 +537,7 @@ section { position: relative; z-index: 2; }
 .featured-title {
   font-family: var(--body-font);
   font-size: clamp(28px, 3.5vw, 42px);
-  font-weight: 600; margin-bottom: 14px; line-height: 1.2;
+  font-weight: 700; margin-bottom: 14px; line-height: 1.2;
 }
 .featured-desc {
   font-size: 14px; line-height: 1.7;
@@ -635,7 +636,7 @@ section { position: relative; z-index: 2; }
 .exp-entry {
   padding: 30px 32px; border: 2px solid var(--border); border-radius: 12px;
   margin-bottom: 10px; position: relative; background: var(--surface);
-  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease), background 0.25s var(--ease);
+  transition: border-color 450ms ease-out, box-shadow 450ms ease-out, transform 450ms ease-out, background 450ms ease-out;
 }
 .exp-entry:hover {
   border-color: rgba(175,127,52,0.45);
@@ -687,7 +688,8 @@ section { position: relative; z-index: 2; }
 .timeline-block {
   width: 150px; height: 150px; padding: 18px;
   border: 2px solid var(--border); border-radius: 12px; background: var(--surface);
-  transition: all 0.3s var(--ease); position: relative;
+  transition: border-color 450ms ease-out, transform 450ms ease-out, box-shadow 450ms ease-out, background 450ms ease-out;
+  position: relative;
   text-align: center; display: flex; flex-direction: column;
   justify-content: center; align-items: center;
 }
@@ -760,9 +762,9 @@ section { position: relative; z-index: 2; }
 .contact-link-value { font-size: 13px; font-weight: 600; }
 .contact-right { display: flex; flex-direction: column; gap: 12px; }
 .contact-offer {
-  padding: 28px; border: 1px solid var(--border); border-radius: 12px;
+  padding: 28px; border: 2px solid var(--border); border-radius: 12px;
   background: var(--surface); position: relative; overflow: hidden;
-  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  transition: border-color 450ms ease-out, transform 450ms ease-out, box-shadow 450ms ease-out;
 }
 .contact-offer::before {
   content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
