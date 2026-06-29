@@ -8,12 +8,12 @@
 </head>
 <body>
 
-<!-- ═══════ TOP BAR ═══════ -->
+<!-- ------- TOP BAR ------- -->
 <header class="topbar">
   <div class="container topbar-inner">
     <a class="brand" href="index.html">Ritika <span>Hasani</span></a>
     <ul class="topbar-nav">
-      <li><a href="water-behaviour.html" class="next-link">Back to First &rarr;</a></li>
+      <li><a href="index.html#work" class="next-link">Back to Work</a></li>
     </ul>
   </div>
 </header>
@@ -30,6 +30,9 @@
       flow serves neither well. This case study covers the research behind that split, and the structural choices
       that came out of it.
     </p>
+    <a class="btn-primary" href="https://www.behance.net/gallery/247977753/Aura-estate" target="_blank" rel="noopener noreferrer">
+      View Full Case Study on Behance
+    </a>
   </section>
 
   <!-- Stats -->
@@ -55,28 +58,24 @@
   <!-- 01 / Context -->
   <section class="section reveal">
     <p class="section-label">01 / Context</p>
-    <div class="section-two-col">
-      <div class="section-text">
-        <h2>When one flow serves no one well</h2>
-        <p>
-          Aura Estate is a refined mobile real estate platform that simplifies property discovery through two
-          tailored user journeys. It balances investor-focused financial insight with an aspirational,
-          lifestyle-driven experience for first-time buyers - designed with a warm, minimalist palette of deep oak,
-          sand, and cream linen as a deliberate alternative to cluttered, traditional real estate interfaces.
-        </p>
-      </div>
-      <div class="section-text">
-        <p>
-          Benchmarking Aura Estate against MagicBricks and NoBroker made the gap clear: both competitors default to
-          a "one size fits all" interface. Neither gives investors real ROI tooling, and neither gives first-time
-          buyers a guided, low-friction path - cognitive load on both platforms came out "extremely high" to "moderate"
-          at best.
-        </p>
-        <p>
-          The question wasn't whether to build two apps or one app - it was whether a single shared entry point could
-          set the right context immediately, then branch into two genuinely different experiences without feeling disjointed.
-        </p>
-      </div>
+    <h2>When one flow serves no one well</h2>
+    <div class="section-text">
+      <p>
+        Aura Estate is a refined mobile real estate platform that simplifies property discovery through two
+        tailored user journeys. It balances investor-focused financial insight with an aspirational,
+        lifestyle-driven experience for first-time buyers - designed with a warm, minimalist palette of deep oak,
+        sand, and cream linen as a deliberate alternative to cluttered, traditional real estate interfaces.
+      </p>
+      <p>
+        Benchmarking Aura Estate against MagicBricks and NoBroker made the gap clear: both competitors default to
+        a "one size fits all" interface. Neither gives investors real ROI tooling, and neither gives first-time
+        buyers a guided, low-friction path - cognitive load on both platforms came out "extremely high" to "moderate"
+        at best.
+      </p>
+      <p>
+        The question wasn't whether to build two apps or one app - it was whether a single shared entry point could
+        set the right context immediately, then branch into two genuinely different experiences without feeling disjointed.
+      </p>
     </div>
   </section>
 
@@ -277,25 +276,21 @@
   <section class="section reveal">
     <p class="section-label">05 / Wireframes &rarr; Hi-Fi</p>
     <h2>From rough boxes to the final flow</h2>
-    <p class="section-intro">
-      Both modes were wireframed independently before any colour or imagery was added, to make sure the structural
-      decisions held up before the "warm minimalist" visual language was layered on top.
-    </p>
-    <div class="progression-grid">
-      <div class="progression-col">
+    <div class="wireframe-grid">
+      <div class="wireframe-figure">
         <p class="progression-col-label">Low-Fi Wireframe</p>
-        <img src="auraestate_wireframe_1.png" alt="Aura Estate low-fidelity wireframe sheet" />
+        <img src="auraestate_8.jpeg" alt="Aura Estate low-fidelity wireframe" />
       </div>
-      <div class="progression-col">
-        <p class="progression-col-label">Final Hi-Fi Screen</p>
-        <img src="auraestate_2.png" alt="Aura Estate investor dashboard, final" />
+      <div class="wireframe-copy">
+        <div class="progression-note">
+          <strong>What changed from low-fi to hi-fi</strong>
+          <p>The low-fi version was a rough sketch of the Market Analysis experience: simple blocks for search, sentiment, and top districts, built to validate the information hierarchy before visuals were added. The hi-fi screen refines that structure into a polished Market Analysis panel with clean filters, a map-based Market Pulse, and clearer district performance detail for an investor-ready overview.</p>
+        </div>
       </div>
-    </div>
-    <div class="progression-note">
-      <strong>What changed and why:</strong> the early investor wireframes led with a property photo at the top of
-      the dashboard, matching the buyer layout. In testing, this read as noise to the investor persona - so the hi-fi
-      version moved photography to a secondary position and pushed yield, NOI, and portfolio performance to the top
-      of the screen instead.
+      <div class="wireframe-figure">
+        <p class="progression-col-label">Market Analysis</p>
+        <img src="auraestate_9.jpeg" alt="Aura Estate market analysis screen" />
+      </div>
     </div>
   </section>
 
@@ -303,36 +298,35 @@
   <section class="section reveal">
     <p class="section-label">06 / Design Decisions</p>
     <h2>Why each key screen looks the way it does</h2>
-    <div class="decision-card">
-      <img src="auraestate_1.png" alt="Aura Estate entry mode selection screen" />
-      <div class="decision-text">
-        <div class="decision-label">Entry / Mode Selection</div>
-        <p>I chose a single, prominent two-option toggle at entry instead of a multi-step questionnaire, because both
-        personas dropped off in benchmarked competitors when onboarding felt like a form rather than a single decision.</p>
+    <div class="decision-grid">
+      <div class="decision-card">
+        <img src="auraestate_1.png" alt="Aura Estate executive portfolio summary screen" />
+        <div class="decision-text">
+          <div class="decision-label">Executive Portfolio Summary</div>
+          <p>This section highlights key metrics upfront-total assets and annual yield-for an instant performance snapshot, while the “Top Performer” feature reinforces pride and success through premium imagery and appreciation data.</p>
+        </div>
       </div>
-    </div>
-    <div class="decision-card">
-      <img src="auraestate_2.png" alt="Aura Estate investor dashboard screen" />
-      <div class="decision-text">
-        <div class="decision-label">Investor Dashboard</div>
-        <p>I surfaced market analytics and projected returns as the primary content instead of property photography,
-        because Marcus's research explicitly ranked lifestyle imagery as noise that got in the way of his decision.</p>
+      <div class="decision-card">
+        <img src="auraestate_2.png" alt="Aura Estate market sentiment and forecast screen" />
+        <div class="decision-text">
+          <div class="decision-label">Market Sentiment & Forecast</div>
+          <p>This section combines an “Aggressive” Sentiment Gauge with a 12-month forecast, letting investors quickly align their risk appetite with real-time institutional trends.</p>
+        </div>
       </div>
-    </div>
-    <div class="decision-card">
-      <img src="auraestate_3.png" alt="Aura Estate buyer property view screen" />
-      <div class="decision-text">
-        <div class="decision-label">Buyer Property View</div>
-        <p>I led the buyer view with photography and neighbourhood story content, with financial data present but not
-        pushed forward, because Maya needed an emotional read on a space before she was ready to engage with numbers.</p>
+      <div class="decision-card">
+        <img src="auraestate_3.png" alt="Aura Estate inbox screen for first-time buyer" />
+        <div class="decision-text">
+          <div class="decision-label">INBOX SCREEN - FIRST TIME BUYER</div>
+          <p>The Inbox screen acts as the communication nerve center for a first-time buyer, centralizing all interactions with agents, sellers, and advisors into a single, organized feed. It eliminates the “clutter” and “slowness” of traditional email by providing instant access to property inquiries, negotiation updates, and direct messaging with your dedicated Strategist. This streamlined interface ensures that critical updates-like a price change or a viewing confirmation-are never missed during the high-pressure buying process.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 07 / Screens -->
   <section class="section reveal">
-    <p class="section-label">07 / Selected Screens</p>
-    <h2>Figma Screens</h2>
+    <p class="section-label">07 / Screen Highlights</p>
+    <h2>Figma prototypes created</h2>
     <div class="gallery">
       <img src="auraestate_1.png" alt="Aura Estate - entry mode selection" />
       <img src="auraestate_2.png" alt="Aura Estate - investor dashboard" />
@@ -391,3 +385,4 @@
 
 </body>
 </html>
+

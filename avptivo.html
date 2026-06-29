@@ -8,12 +8,12 @@
 </head>
 <body>
 
-<!-- ═══════ TOP BAR ═══════ -->
+<!-- ------- TOP BAR ------- -->
 <header class="topbar">
   <div class="container topbar-inner">
     <a class="brand" href="index.html">Ritika <span>Hasani</span></a>
     <ul class="topbar-nav">
-      <li><a href="auraestate.html" class="next-link">Next Case Study &rarr;</a></li>
+      <li><a href="index.html#work" class="next-link">Back to Work</a></li>
     </ul>
   </div>
 </header>
@@ -29,6 +29,9 @@
       they quit because the app gives them too much to decide and too little structure to lean on. This case study
       walks through the research, the structural decisions, and the reasoning behind the screens - not just the screens.
     </p>
+    <a class="btn-primary" href="https://www.behance.net/gallery/247810553/Avptivo" target="_blank" rel="noopener noreferrer">
+      View Full Case Study on Behance
+    </a>
   </section>
 
   <!-- Stats -->
@@ -96,27 +99,23 @@
   <!-- 02 / Context -->
   <section class="section reveal">
     <p class="section-label">02 / Context</p>
-    <div class="section-two-col">
-      <div class="section-text">
-        <h2>Why people stop showing up</h2>
-        <p>
-          Most fitness apps are actually three separate apps stitched together - a workout tracker, a meal logger,
-          and a progress dashboard. Users switch between them, lose context, and eventually stop using all of them.
-        </p>
-      </div>
-      <div class="section-text">
-        <p>
-          Five specific problems came out of early research and shaped everything that followed: a lack of a
-          "central hub" left users disorganised about their health goals; fixed workout durations ignored that most
-          people only have 15-20 free minutes; charts and graphs were too technical for the average user to read at a
-          glance; users felt isolated without any social or accountability layer; and vegetarian or vegan users
-          specifically lacked diverse, high-protein meal plans.
-        </p>
-        <p>
-          None of these are UI problems. They're structural ones - which is why the response couldn't just be "nicer
-          screens."
-        </p>
-      </div>
+    <h2>Why people stop showing up</h2>
+    <div class="section-text">
+      <p>
+        Most fitness apps are actually three separate apps stitched together - a workout tracker, a meal logger,
+        and a progress dashboard. Users switch between them, lose context, and eventually stop using all of them.
+      </p>
+      <p>
+        Five specific problems came out of early research and shaped everything that followed: a lack of a
+        "central hub" left users disorganised about their health goals; fixed workout durations ignored that most
+        people only have 15-20 free minutes; charts and graphs were too technical for the average user to read at a
+        glance; users felt isolated without any social or accountability layer; and vegetarian or vegan users
+        specifically lacked diverse, high-protein meal plans.
+      </p>
+      <p>
+        None of these are UI problems. They're structural ones - which is why the response couldn't just be "nicer
+        screens."
+      </p>
     </div>
   </section>
 
@@ -254,25 +253,21 @@
   <section class="section reveal">
     <p class="section-label">07 / Wireframes &rarr; Hi-Fi</p>
     <h2>From rough boxes to the final flow</h2>
-    <p class="section-intro">
-      Every screen went through a low-fidelity pass first - laid out purely for structure and hierarchy, with no
-      visual design decisions made yet. The hi-fi screens only followed once the structure held up on its own.
-    </p>
-    <div class="progression-grid">
-      <div class="progression-col">
+    <div class="wireframe-grid">
+      <div class="wireframe-figure">
         <p class="progression-col-label">Low-Fi Wireframe</p>
-        <img src="avptivo_wireframe_1.png" alt="Avptivo low-fidelity wireframe sheet" />
+        <img src="avptivo_8.png" alt="Avptivo low-fidelity wireframe" />
       </div>
-      <div class="progression-col">
-        <p class="progression-col-label">Final Hi-Fi Screen</p>
-        <img src="avptivo_1.png" alt="Avptivo home daily loop screen, final" />
+      <div class="wireframe-copy">
+        <div class="progression-note">
+          <strong>What changed from low-fi to hi-fi</strong>
+          <p>The low-fi version defined the onboarding hierarchy with rough blocks for goal selection, benefit messaging, and sign-up structure. The hi-fi screen refines that flow into a polished multi-step onboarding experience, using value-focused panels, intuitive goal inputs, and secure SSO account creation to lower friction and build trust from the first login.</p>
+        </div>
       </div>
-    </div>
-    <div class="progression-note">
-      <strong>What changed and why:</strong> the wireframe pass started with a tab-style metrics list on Home.
-      Testing made it clear users skimmed past blocks of numbers, so the hi-fi version replaced them with a single
-      "next action" card and pushed detailed metrics one tap away into Track - reflecting the IA decision above,
-      not just a visual refresh.
+      <div class="wireframe-figure">
+        <p class="progression-col-label">Hi-Fi Screen</p>
+        <img src="avptivo_9.png" alt="Avptivo high-fidelity onboarding screen" />
+      </div>
     </div>
   </section>
 
@@ -280,29 +275,31 @@
   <section class="section reveal">
     <p class="section-label">08 / Design Decisions</p>
     <h2>Why each key screen looks the way it does</h2>
-    <div class="decision-card">
-      <img src="avptivo_1.png" alt="Avptivo home screen" />
-      <div class="decision-text">
-        <div class="decision-label">Home Screen</div>
-        <p>I designed the home screen to always surface one clear next action instead of a menu of options - because
-        research showed users dropped off most often when the app asked them to decide what to do, not when it told them.</p>
+    <div class="decision-grid">
+      <div class="decision-card">
+        <img src="avptivo_1.png" alt="Avptivo home screen" />
+        <div class="decision-text">
+          <div class="decision-label">Home Screen</div>
+          <p>I designed the home screen to always surface one clear next action instead of a menu of options - because
+          research showed users dropped off most often when the app asked them to decide what to do, not when it told them.</p>
+        </div>
       </div>
-    </div>
-    <div class="decision-card">
-      <img src="avptivo_3.png" alt="Avptivo post-workout meal suggestion screen" />
-      <div class="decision-text">
-        <div class="decision-label">Post-Workout Meal Suggestion</div>
-        <p>I tied meal suggestions to the workout just completed instead of a generic daily plan, because the Fit
-        Customizer persona specifically needed nutrition to feel connected to effort, not like a separate admin task.</p>
+      <div class="decision-card">
+        <img src="avptivo_3.png" alt="Avptivo post-workout meal suggestion screen" />
+        <div class="decision-text">
+          <div class="decision-label">Post-Workout Meal Suggestion</div>
+          <p>I tied meal suggestions to the workout just completed instead of a generic daily plan, because the Fit
+          Customizer persona specifically needed nutrition to feel connected to effort, not like a separate admin task.</p>
+        </div>
       </div>
-    </div>
-    <div class="decision-card">
-      <img src="avptivo_4.png" alt="Avptivo progress and streak screen" />
-      <div class="decision-text">
-        <div class="decision-label">Progress & Streak View</div>
-        <p>I placed streaks and weekly totals inline, immediately after a completed session, rather than behind a
-        separate tab - because the research showed progress only motivated users when it was visible in context, right
-        after the action that earned it.</p>
+      <div class="decision-card">
+        <img src="avptivo_4.png" alt="Avptivo progress and streak screen" />
+        <div class="decision-text">
+          <div class="decision-label">Progress & Streak View</div>
+          <p>I placed streaks and weekly totals inline, immediately after a completed session, rather than behind a
+          separate tab - because the research showed progress only motivated users when it was visible in context, right
+          after the action that earned it.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -310,7 +307,7 @@
   <!-- 09 / Screens -->
   <section class="section reveal">
     <p class="section-label">09 / Selected Screens</p>
-    <h2>Figma Screens</h2>
+    <h2>Figma prototypes created</h2>
     <div class="gallery">
       <img src="avptivo_1.png" alt="Avptivo - home daily loop screen" />
       <img src="avptivo_2.png" alt="Avptivo - workout session screen" />
@@ -382,3 +379,4 @@
 
 </body>
 </html>
+
